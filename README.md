@@ -1,4 +1,4 @@
-# fet: Front-End Toolkits
+# fet: Front-End Training
 
 📖 **Dokumentasi / Documentation: [chalidade.github.io/fet](https://chalidade.github.io/fet/)** (Bahasa Indonesia · [English](https://chalidade.github.io/fet/en/))
 

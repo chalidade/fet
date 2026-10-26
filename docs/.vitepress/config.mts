@@ -94,7 +94,7 @@ function nav(lang: "id" | "en"): DefaultTheme.NavItem[] {
 export default withMermaid(
   defineConfig({
     title: "fet",
-    description: "Front-End Toolkits: roadmap, deep dives, and installable toolkits for front-end developers.",
+    description: "Front-End Training: roadmap, deep dives, and installable toolkits for front-end developers.",
     base: "/fet/",
     cleanUrls: true,
     lastUpdated: true,

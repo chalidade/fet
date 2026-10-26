@@ -1,6 +1,6 @@
 # Apa itu fet?
 
-**fet (Front-End Toolkits)** adalah tempat belajar front-end **sampai ke dalam**. Isinya tiga hal:
+**fet (Front-End Training)** adalah tempat belajar front-end **sampai ke dalam**. Isinya tiga hal:
 
 1. **Roadmap**: urutan topik front-end dari dasar sampai lanjut, dalam [20 tahap dan 8 fase](/roadmap/).
 2. **Panduan belajar per tahap**: bukan hanya *apa* yang dipelajari, tapi *bagaimana*
