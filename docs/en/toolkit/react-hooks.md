@@ -20,6 +20,8 @@ Requires React 18 or newer (`useSyncExternalStore`).
 | --- | --- |
 | [`useDebouncedValue`](#usedebouncedvalue) | A value that waits until input stops (search) |
 | [`useDebouncedCallback`](#usedebouncedcallback) | A debounced function that's stable across renders (autosave) |
+| [`useThrottledCallback`](#usethrottledcallback) | At most once per interval (scroll, resize, drag) |
+| [`useOnline`](#useonline) | Connection status for an offline banner |
 | [`useMediaQuery`](#usemediaquery) | Responsive logic in JS without hydration mismatches |
 | [`useLocalStorage`](#uselocalstorage) | State that persists and syncs across tabs |
 | [`useEventListener`](#useeventlistener) | Listeners that clean up after themselves |
@@ -49,6 +51,24 @@ pending call is cancelled on unmount, so there's no `setState` after unmount.
 const save = useDebouncedCallback((draft: string) => api.save(draft), 1000);
 
 <textarea onChange={(e) => save(e.target.value)} onBlur={() => save.flush()} />
+```
+
+## `useThrottledCallback`
+
+The first call runs immediately; later calls in the same window are merged into one call at the
+end of the window with the latest arguments. Good for events that fire continuously during an
+interaction.
+
+```tsx
+const onScroll = useThrottledCallback(() => setProgress(readScrollProgress()), 100);
+useEventListener(window, "scroll", onScroll, { passive: true });
+```
+
+## `useOnline`
+
+```tsx
+const online = useOnline();
+return online ? null : <p role="status">You are offline. Changes are saved locally.</p>;
 ```
 
 ## `useMediaQuery`

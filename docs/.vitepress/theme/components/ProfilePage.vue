@@ -107,7 +107,10 @@ async function saveProfile() {
             <p class="fet-muted fet-small">@{{ profile.username }} · {{ s.profile.joined }} {{ formatDate(profile.created_at, lang) }}</p>
             <p v-if="profile.bio" class="fet-profile__bio">{{ profile.bio }}</p>
           </div>
-          <button v-if="isMe && !editing" class="fet-btn fet-btn--sm fet-btn--ghost" @click="startEdit"><Icon name="pencil" /> {{ s.profile.edit }}</button>
+          <div class="fet-profile__actions">
+            <a class="fet-btn fet-btn--sm fet-btn--soft" :href="href(paths(lang).evidence(profile.username))"><Icon name="award" /> {{ s.evidence.open }}</a>
+            <button v-if="isMe && !editing" class="fet-btn fet-btn--sm fet-btn--ghost" @click="startEdit"><Icon name="pencil" /> {{ s.profile.edit }}</button>
+          </div>
         </div>
 
         <form v-if="editing" class="fet-form" style="margin-top: 20px" @submit.prevent="saveProfile">

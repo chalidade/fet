@@ -92,6 +92,44 @@ export async function stageStats(stage: string): Promise<{ learning: number; don
   return row ?? { learning: 0, done: 0 };
 }
 
+// --- Bukti belajar -----------------------------------------------------------
+
+export interface ProgressRow {
+  stage: string;
+  status: Status;
+  updated_at: string;
+}
+
+export interface WorkRow {
+  stage: string;
+  notes: string;
+  code: Code;
+  checked: number[];
+  updated_at: string;
+}
+
+export async function getProgress(userId: string): Promise<ProgressRow[]> {
+  return check(await client().from("stage_progress").select("stage, status, updated_at").eq("user_id", userId)) as ProgressRow[];
+}
+
+/** Konsep yang dicentang per tahap (publik). `null` kalau migrasi 20261028 belum dijalankan. */
+export async function getPublicChecklist(userId: string): Promise<Record<string, number[]> | null> {
+  const res = await client().rpc("public_checklist", { p_user: userId });
+  if (res.error) return null;
+  const rows = (res.data ?? []) as Array<{ stage: string; checked: number[] }>;
+  return Object.fromEntries(rows.map((r) => [r.stage, r.checked]));
+}
+
+/** Semua catatan dan kode milik user yang sedang login (privat, hanya untuk pemiliknya). */
+export async function getAllWork(): Promise<WorkRow[]> {
+  return check(await client().from("stage_work").select("stage, notes, code, checked, updated_at").eq("user_id", me())) as WorkRow[];
+}
+
+export async function listAllPostsByUser(userId: string): Promise<FeedPost[]> {
+  const q = client().from("posts_feed").select("*").eq("user_id", userId).order("created_at", { ascending: true }).limit(500);
+  return check(await q) as FeedPost[];
+}
+
 // --- Postingan -------------------------------------------------------------------
 
 export const PAGE_SIZE = 10;

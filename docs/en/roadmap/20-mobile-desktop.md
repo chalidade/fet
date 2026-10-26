@@ -52,4 +52,4 @@ to native APIs, and how much code can be reused.
 
 ## Related toolkit
 
-- (planned) `@chalidade/tokens` is designed to work on both web and React Native
+- [`@chalidade/tokens`](../toolkit/tokens.md): the TypeScript objects work in React Native, the CSS on the web

@@ -16,6 +16,7 @@ export function paths(lang: Lang) {
     post: (id: string) => `${p}/${en ? "community" : "komunitas"}/post?id=${id}`,
     profile: (username?: string) => `${p}/${en ? "profile" : "profil"}${username ? `?u=${encodeURIComponent(username)}` : ""}`,
     stage: (slug: string) => `${p}/roadmap/${slug}`,
+    evidence: (username?: string) => `${p}/${en ? "evidence" : "bukti-belajar"}${username ? `?u=${encodeURIComponent(username)}` : ""}`,
   };
 }
 

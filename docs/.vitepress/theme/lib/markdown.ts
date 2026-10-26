@@ -16,6 +16,10 @@ export function renderMarkdown(src: string): string {
   return md.render(src);
 }
 
+export function renderInline(src: string): string {
+  return md.renderInline(src);
+}
+
 /** Ubah link Google Drive / YouTube menjadi URL embed. Selain itu: null. */
 export function embedUrl(url: string | null | undefined): string | null {
   if (!url) return null;

@@ -1,6 +1,7 @@
 # @chalidade/react-hooks
 
 React hooks kecil yang aman untuk SSR dan teruji: `useDebouncedValue`, `useDebouncedCallback`,
+`useThrottledCallback`, `useOnline`,
 `useMediaQuery`, `useLocalStorage`, `useEventListener`, `useOnClickOutside`,
 `useIntersectionObserver`, `usePrevious`, `useLatest`, `useIsomorphicLayoutEffect`.
 

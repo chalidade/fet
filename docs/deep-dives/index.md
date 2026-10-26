@@ -9,6 +9,7 @@ biasanya hanya dipakai, dengan eksperimen yang bisa dijalankan sendiri.
 | [Browser Rendering Pipeline](browser-rendering-pipeline.md) | ✅ | 03, 16 |
 | [CSS Cascade & Specificity](css-cascade.md) | ✅ | 03, 08, 15 |
 | [HTTP Caching](http-caching.md) | ✅ | 01, 09, 16, 17 |
+| [Efisiensi di React](react-efficiency.md): debounce, memo, transition, virtualisasi | ✅ | 04, 07, 16 |
 | Cara kerja V8: parsing, Ignition, TurboFan, hidden classes | 🗓️ | 04 |
 | Accessibility tree & cara screen reader bekerja | 🗓️ | 02 |
 | React Fiber dari source code | 🗓️ | 07 |
