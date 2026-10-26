@@ -1,21 +1,11 @@
 import { defineConfig, type DefaultTheme } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
-import { stages } from "./stages";
+import { phases, stages } from "./stages";
 import { taskList } from "./taskList";
 
 const REPO = "https://github.com/chalidade/fet";
 
 
-const phases: Array<{ id: string; en: string; range: [number, number] }> = [
-  { id: "Fase 1 · Fondasi Web", en: "Phase 1 · Web Foundations", range: [0, 4] },
-  { id: "Fase 2 · Workflow", en: "Phase 2 · Workflow", range: [4, 6] },
-  { id: "Fase 3 · Framework & Styling", en: "Phase 3 · Framework & Styling", range: [6, 8] },
-  { id: "Fase 4 · Tooling & Kualitas", en: "Phase 4 · Tooling & Quality", range: [8, 12] },
-  { id: "Fase 5 · Platform & Keamanan", en: "Phase 5 · Platform & Security", range: [12, 15] },
-  { id: "Fase 6 · Performance & Browser APIs", en: "Phase 6 · Performance & Browser APIs", range: [15, 17] },
-  { id: "Fase 7 · Rendering & Data", en: "Phase 7 · Rendering & Data", range: [17, 19] },
-  { id: "Fase 8 · Di Luar Browser", en: "Phase 8 · Beyond the Browser", range: [19, 20] },
-];
 
 function sidebar(lang: "id" | "en"): DefaultTheme.Sidebar {
   const p = lang === "id" ? "" : "/en";
