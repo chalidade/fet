@@ -2,6 +2,11 @@
 
 📖 **Dokumentasi / Documentation: [chalidade.github.io/fet](https://chalidade.github.io/fet/)** (Bahasa Indonesia · [English](https://chalidade.github.io/fet/en/))
 
+[![Video launch fet: belajar front-end sampai paham cara kerjanya](docs/public/fet-launch-poster.jpg)](https://chalidade.github.io/fet/fet-launch.mp4)
+
+🎬 **[Tonton video launch (33 detik)](https://chalidade.github.io/fet/fet-launch.mp4)**: dari roadmap, Ruang Belajar,
+uji pemahaman, sampai Bukti Belajar.
+
 Tempat untuk **deep dive front-end**: roadmap yang lengkap, cara belajar tiap tahapnya,
 dan toolkit yang bisa langsung di-install di project.
 
