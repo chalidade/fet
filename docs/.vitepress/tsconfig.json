@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["vitepress/client"],
+    "declaration": false,
+    "noEmit": true,
+    "exactOptionalPropertyTypes": false
+  },
+  "include": ["**/*.ts", "**/*.mts", "**/*.vue"]
+}

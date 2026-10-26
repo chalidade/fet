@@ -47,9 +47,32 @@ All roadmap pages use the same format, so you always know where to look:
 ## How to use this site
 
 1. Read [How to learn](/en/how-to-learn) (5 minutes). It explains the 4 levels of understanding used throughout the site.
-2. Open the [Roadmap overview](/en/roadmap/) and pick the stage that fits you.
-3. For each stage: tick the concept map → answer the questions → follow the learning steps → build the project.
-4. Save your experiment results in [Experiment notes](/en/notes/).
+2. **Sign in** (top-right button) with GitHub or Google so your progress is saved.
+3. Open the [Roadmap overview](/en/roadmap/), pick the stage that fits you, and click **Start learning**.
+4. In the **Learning Room**, for each stage:
+
+| Step | Where | Result |
+| --- | --- | --- |
+| 1. Read the material and answer *Check your understanding* | The stage page | You know which parts you don't understand yet |
+| 2. Do the exercises and experiments | **Code** tab (editor + live preview) | Exercise code saved to your account |
+| 3. Write notes | **Notes** tab | Notes: question → experiment → conclusion |
+| 4. Record a 3–5 minute video explanation | **Video explanation** tab | A video in your Google Drive, evidence you can replay |
+| 5. Share with the community | **Share** tab | A post in the [Community](/en/community/) others can comment on |
+| 6. Mark it **Done** | The *Status* picker | Progress shown on [your profile](/en/profile) |
+
+::: tip Why record a video?
+Explaining something in your own words is the most honest test of understanding (the Feynman
+technique). If you get stuck explaining, there's a part you need to learn again. The video also
+becomes a personal archive: when you forget, just replay your own explanation.
+:::
+
+## Your data is yours
+
+- **Videos** and exported notes are stored in **your own Google Drive** (the `fet-belajar/` folder).
+  fet can only access files it created.
+- **Progress, notes, and code** are stored in your account. Notes and code are private unless you
+  share them in a post.
+- You can download everything as a `.zip` from the Learning Room at any time.
 
 ## Repository contents
 

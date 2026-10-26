@@ -47,9 +47,32 @@ Semua halaman roadmap memakai format yang sama, jadi kamu selalu tahu harus menc
 ## Cara memakai situs ini
 
 1. Baca [Metode belajar](/how-to-learn) (5 menit). Di sana dijelaskan 4 tingkat pemahaman yang dipakai di seluruh situs.
-2. Buka [Peta roadmap](/roadmap/) dan pilih tahap yang sesuai.
-3. Untuk setiap tahap: centang peta konsep → jawab uji pemahaman → kerjakan cara belajar → bangun proyeknya.
-4. Simpan hasil eksperimenmu di [Catatan eksperimen](/notes/).
+2. **Masuk** (tombol di kanan atas) dengan GitHub atau Google supaya progresmu tersimpan.
+3. Buka [Peta roadmap](/roadmap/) dan pilih tahap yang sesuai, lalu klik **Mulai belajar**.
+4. Di **Ruang Belajar**, untuk setiap tahap:
+
+| Langkah | Di mana | Hasilnya |
+| --- | --- | --- |
+| 1. Baca materi dan jawab *Uji pemahaman* | Halaman tahap | Tahu bagian mana yang belum paham |
+| 2. Kerjakan latihan dan eksperimen | Tab **Kode** (editor + preview langsung) | Kode latihan tersimpan di akunmu |
+| 3. Tulis catatan | Tab **Catatan** | Catatan pertanyaan → eksperimen → kesimpulan |
+| 4. Rekam video penjelasan 3–5 menit | Tab **Video penjelasan** | Video di Google Drive-mu, bukti belajar yang bisa diputar ulang |
+| 5. Bagikan ke komunitas | Tab **Bagikan** | Postingan di [Komunitas](/komunitas/) yang bisa dikomentari orang lain |
+| 6. Tandai **Selesai** | Pilihan *Status* | Progres terlihat di [profilmu](/profil) |
+
+::: tip Kenapa harus merekam video?
+Menjelaskan dengan kata-kata sendiri adalah tes pemahaman yang paling jujur (teknik Feynman).
+Kalau macet saat menjelaskan, berarti ada bagian yang perlu dipelajari lagi. Videonya juga jadi
+arsip pribadi: saat lupa, kamu tinggal memutar penjelasanmu sendiri.
+:::
+
+## Data kamu milik kamu
+
+- **Video** dan ekspor catatan disimpan di **Google Drive milikmu** (folder `fet-belajar/`). fet
+  hanya bisa mengakses file yang dibuatnya sendiri.
+- **Progres, catatan, dan kode** disimpan di akunmu. Catatan dan kode bersifat privat, kecuali kamu
+  membagikannya lewat postingan.
+- Kapan saja kamu bisa mengunduh semuanya sebagai `.zip` dari Ruang Belajar.
 
 ## Isi repository
 

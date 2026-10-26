@@ -16,8 +16,8 @@ hero:
       text: Lihat roadmap
       link: /roadmap/
     - theme: alt
-      text: Toolkit
-      link: /toolkit/
+      text: Mulai belajar
+      link: /ruang-belajar
 
 features:
   - icon: 🗺️
@@ -35,16 +35,16 @@ features:
     details: Pertanyaan yang tidak bisa dijawab dengan hafalan. Jawab dulu, dan bagian yang ragu adalah tempat untuk deep dive.
     link: /roadmap/04-javascript#uji-pemahaman
     linkText: Contoh pertanyaan
-  - icon: 🛠️
-    title: Bangun dari nol
-    details: Proyek latihan bertingkat sampai membuat ulang mini React, mini bundler, dan Promise sendiri.
-    link: /roadmap/07-framework#proyek-latihan
-    linkText: Contoh proyek
-  - icon: 🔬
-    title: Deep dives
-    details: Mekanisme di balik hal yang biasa dipakai, seperti event loop dan rendering pipeline, lengkap dengan eksperimen.
-    link: /deep-dives/
-    linkText: Baca deep dive
+  - icon: 🧑‍💻
+    title: Ruang Belajar
+    details: Kerjakan latihan langsung di browser, tulis catatan, dan rekam video penjelasan yang tersimpan di Google Drive-mu sebagai bukti belajar.
+    link: /ruang-belajar
+    linkText: Mulai belajar
+  - icon: 🤝
+    title: Komunitas
+    details: Bagikan catatan, kode, dan videomu. Lihat hasil belajar orang lain, beri komentar, dan belajar bareng.
+    link: /komunitas/
+    linkText: Lihat komunitas
   - icon: 📦
     title: Toolkit yang bisa di-install
     details: Package npm kecil dan terdokumentasi, dimulai dari @chalidade/utils. Source-nya juga bisa dipakai sebagai bahan belajar.

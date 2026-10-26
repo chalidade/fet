@@ -1,30 +1,9 @@
 import { defineConfig, type DefaultTheme } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
+import { stages } from "./stages";
 
 const REPO = "https://github.com/chalidade/fet";
 
-const stages = [
-  ["01-internet", "Internet", "Internet"],
-  ["02-html", "HTML", "HTML"],
-  ["03-css", "CSS", "CSS"],
-  ["04-javascript", "JavaScript", "JavaScript"],
-  ["05-git-vcs", "Git & VCS", "Git & VCS"],
-  ["06-package-managers", "Package Managers", "Package Managers"],
-  ["07-framework", "Framework", "Framework"],
-  ["08-css-architecture", "CSS Architecture", "CSS Architecture"],
-  ["09-build-tools", "Build Tools", "Build Tools"],
-  ["10-linters-formatters", "Linters & Formatters", "Linters & Formatters"],
-  ["11-testing", "Testing", "Testing"],
-  ["12-typescript", "TypeScript", "TypeScript"],
-  ["13-web-security", "Web Security", "Web Security"],
-  ["14-authentication", "Authentication", "Authentication"],
-  ["15-web-components", "Web Components", "Web Components"],
-  ["16-performance", "Performance", "Performance"],
-  ["17-browser-apis", "Browser APIs & PWA", "Browser APIs & PWA"],
-  ["18-rendering-strategies", "Rendering Strategies", "Rendering Strategies"],
-  ["19-graphql-data-fetching", "GraphQL & Data Fetching", "GraphQL & Data Fetching"],
-  ["20-mobile-desktop", "Mobile & Desktop", "Mobile & Desktop"],
-] as const;
 
 const phases: Array<{ id: string; en: string; range: [number, number] }> = [
   { id: "Fase 1 · Fondasi Web", en: "Phase 1 · Web Foundations", range: [0, 4] },
@@ -44,8 +23,8 @@ function sidebar(lang: "id" | "en"): DefaultTheme.Sidebar {
   const roadmapGroups: DefaultTheme.SidebarItem[] = phases.map((phase) => ({
     text: phase[lang],
     collapsed: false,
-    items: stages.slice(...phase.range).map(([slug, idText, enText]) => ({
-      text: `${slug.slice(0, 2)} · ${lang === "id" ? idText : enText}`,
+    items: stages.slice(...phase.range).map(({ slug, title }) => ({
+      text: `${slug.slice(0, 2)} · ${title}`,
       link: `${p}/roadmap/${slug}`,
     })),
   }));
@@ -96,6 +75,16 @@ function nav(lang: "id" | "en"): DefaultTheme.NavItem[] {
     { text: "Roadmap", link: `${p}/roadmap/`, activeMatch: `^${p}/roadmap/` },
     { text: "Deep dives", link: `${p}/deep-dives/`, activeMatch: `^${p}/deep-dives/` },
     { text: "Toolkit", link: `${p}/toolkit/`, activeMatch: `^${p}/toolkit/` },
+    {
+      text: t("Ruang Belajar", "Learning Room"),
+      link: lang === "id" ? "/ruang-belajar" : "/en/learning-room",
+      activeMatch: lang === "id" ? "^/ruang-belajar" : "^/en/learning-room",
+    },
+    {
+      text: t("Komunitas", "Community"),
+      link: lang === "id" ? "/komunitas/" : "/en/community/",
+      activeMatch: lang === "id" ? "^/(komunitas|profil)" : "^/en/(community|profile)",
+    },
   ];
 }
 
