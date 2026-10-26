@@ -86,3 +86,4 @@ loop, prototypes, and the DOM. The hardest bugs in front-end apps almost always 
 - [`@chalidade/utils`](../toolkit/utils.md): `debounce`, `throttle` (read the source as an exercise)
 - Deep dive: [Efficiency in React](../deep-dives/react-efficiency.md) (debouncing inside components)
 - Deep dive: [Event Loop](../deep-dives/event-loop.md)
+- Deep dive: [How V8 works](../deep-dives/v8.md) (hidden classes, inline caches, deopt)

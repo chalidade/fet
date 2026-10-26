@@ -66,5 +66,6 @@ guesswork.
 - [`@chalidade/react-hooks`](../toolkit/react-hooks.md): `useIntersectionObserver`, `useThrottledCallback`
 - (planned) `useVirtualList` in `@chalidade/react-hooks`
 - Deep dive: [Efficiency in React](../deep-dives/react-efficiency.md)
+- Deep dive: [How V8 works](../deep-dives/v8.md)
 - Deep dive: [Browser Rendering Pipeline](../deep-dives/browser-rendering-pipeline.md)
 - Deep dive: [HTTP Caching](../deep-dives/http-caching.md)
