@@ -10,7 +10,7 @@ usually just use, with experiments you can run yourself.
 | [CSS Cascade & Specificity](css-cascade.md) | ✅ | 03, 08, 15 |
 | [HTTP Caching](http-caching.md) | ✅ | 01, 09, 16, 17 |
 | [Efficiency in React](react-efficiency.md): debounce, memo, transitions, virtualization | ✅ | 04, 07, 16 |
-| How V8 works: parsing, Ignition, TurboFan, hidden classes | 🗓️ | 04 |
+| [How V8 works](v8.md): parsing, Ignition, TurboFan, hidden classes | ✅ | 04, 16 |
 | The accessibility tree & how screen readers work | 🗓️ | 02 |
 | React Fiber from the source code | 🗓️ | 07 |
 | Signals: from Knockout to the TC39 proposal | 🗓️ | 07 |

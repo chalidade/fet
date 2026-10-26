@@ -87,3 +87,4 @@ bermuara ke salah satu dari ini.
 - [`@chalidade/utils`](../toolkit/utils.md): `debounce`, `throttle` (baca source-nya sebagai latihan)
 - Deep dive: [Efisiensi di React](../deep-dives/react-efficiency.md) (debounce di dalam komponen)
 - Deep dive: [Event Loop](../deep-dives/event-loop.md)
+- Deep dive: [Cara kerja V8](../deep-dives/v8.md) (hidden classes, inline caches, deopt)
