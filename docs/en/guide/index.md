@@ -1,6 +1,6 @@
 # What is fet?
 
-**fet (Front-End Toolkits)** is a place to learn front-end **all the way down**. It has three parts:
+**fet (Front-End Training)** is a place to learn front-end **all the way down**. It has three parts:
 
 1. **Roadmap**: front-end topics in order, from fundamentals to advanced, in [20 stages and 8 phases](/en/roadmap/).
 2. **A learning guide for every stage**: not just *what* to learn, but *how* to learn it and

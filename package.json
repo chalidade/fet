@@ -1,7 +1,7 @@
 {
   "name": "fet",
   "private": true,
-  "description": "Front-End Toolkits: roadmap, panduan deep dive, dan toolkit front-end yang bisa di-install.",
+  "description": "Front-End Training: roadmap, panduan deep dive, dan toolkit front-end yang bisa di-install.",
   "license": "MIT",
   "packageManager": "pnpm@10.28.0",
   "engines": {
