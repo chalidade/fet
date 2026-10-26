@@ -23,6 +23,7 @@ fet/
 │   ├── templates/      # template untuk menulis topik baru
 │   ├── toolkit/        # dokumentasi package
 │   └── how-to-learn.md # metode belajar yang dipakai di seluruh repo
+├── supabase/           # skema database & panduan setup platform komunitas
 └── packages/           # toolkit yang bisa di-install (npm)
     └── utils/          # @chalidade/utils: debounce, throttle, cx, clamp
 ```
@@ -33,6 +34,13 @@ fet/
 - **Sudah berpengalaman:** loncat ke bagian *Uji pemahaman* di setiap tahap. Topik yang
   pertanyaannya tidak bisa kamu jawab dengan yakin adalah tempat untuk deep dive.
 - **Butuh toolkit:** lihat [`packages/`](packages).
+
+## Ruang Belajar & Komunitas
+
+Setiap tahap roadmap punya **Ruang Belajar**: editor kode dengan preview, catatan, perekam video
+penjelasan (disimpan ke Google Drive milik user), dan tombol untuk membagikan hasilnya ke
+**Komunitas**. Login dengan GitHub/Google, data disimpan di Supabase. Panduan setup ada di
+[`supabase/README.md`](supabase/README.md).
 
 ## Toolkit (packages)
 

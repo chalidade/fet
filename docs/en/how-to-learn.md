@@ -25,7 +25,8 @@ on the topics you want to truly master.
 4. **Prove it with experiments.** Test every important claim with small code, DevTools, or
    measurements. Keep the experiments.
 5. **Build it from scratch.** Do the "deep" practice project on the stage page.
-6. **Teach it.** Write a summary in your own words, or turn it into a toolkit in `packages/`.
+6. **Teach it.** Record a 3–5 minute video explanation in the [Learning Room](/en/learning-room), share it
+   with the [Community](/en/community/), or turn it into a toolkit in `packages/`.
 
 ## 3. Why personal notes matter
 

@@ -16,8 +16,8 @@ hero:
       text: See the roadmap
       link: /en/roadmap/
     - theme: alt
-      text: Toolkit
-      link: /en/toolkit/
+      text: Start learning
+      link: /en/learning-room
 
 features:
   - icon: 🗺️
@@ -35,16 +35,16 @@ features:
     details: Questions you can't answer by memorization. Answer them first. Wherever you hesitate is where to dive deep.
     link: /en/roadmap/04-javascript#check-your-understanding
     linkText: Sample questions
-  - icon: 🛠️
-    title: Build it from scratch
-    details: Tiered practice projects, up to rebuilding a mini React, a mini bundler, and your own Promise.
-    link: /en/roadmap/07-framework#practice-projects
-    linkText: Sample projects
-  - icon: 🔬
-    title: Deep dives
-    details: The mechanisms behind everyday tools, such as the event loop and the rendering pipeline, with experiments you can run.
-    link: /en/deep-dives/
-    linkText: Read the deep dives
+  - icon: 🧑‍💻
+    title: Learning Room
+    details: Do exercises right in the browser, write notes, and record a video explanation saved to your Google Drive as evidence of learning.
+    link: /en/learning-room
+    linkText: Start learning
+  - icon: 🤝
+    title: Community
+    details: Share your notes, code, and videos. See what others have learned, leave comments, and learn together.
+    link: /en/community/
+    linkText: See the community
   - icon: 📦
     title: Installable toolkits
     details: Small, documented npm packages, starting with @chalidade/utils. The source doubles as learning material.

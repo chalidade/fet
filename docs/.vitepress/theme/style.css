@@ -1,0 +1,160 @@
+/* Komponen komunitas & Ruang Belajar. Memakai variabel tema VitePress
+   supaya otomatis mengikuti mode terang/gelap. */
+
+.fet-muted { color: var(--vp-c-text-2); }
+.fet-small { font-size: 13px; }
+.fet-error { color: var(--vp-c-danger-1); }
+.spacer { flex: 1; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+.fet-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0; }
+
+.fet-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--vp-c-brand-1); border-radius: 20px;
+  padding: 6px 16px; font-size: 14px; font-weight: 600; line-height: 1.4;
+  background: var(--vp-c-brand-1); color: var(--vp-c-white) !important;
+  text-decoration: none !important; cursor: pointer; transition: background 0.2s, border-color 0.2s;
+}
+.fet-btn:hover { background: var(--vp-c-brand-2); border-color: var(--vp-c-brand-2); }
+.fet-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.fet-btn--small { padding: 4px 12px; font-size: 13px; }
+.fet-btn--ghost { background: transparent; color: var(--vp-c-text-1) !important; border-color: var(--vp-c-divider); }
+.fet-btn--ghost:hover, .fet-btn--ghost.active { background: var(--vp-c-default-soft); border-color: var(--vp-c-brand-1); }
+.fet-btn--danger { background: var(--vp-c-danger-1); border-color: var(--vp-c-danger-1); }
+.fet-link { background: none; border: 0; padding: 0; color: var(--vp-c-brand-1); cursor: pointer; font: inherit; }
+
+.fet-callout, .fet-alert {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 12px 16px; border-radius: 8px; margin: 16px 0;
+  background: var(--vp-c-default-soft);
+}
+.fet-alert { background: var(--vp-c-danger-soft); }
+
+.fet-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;
+  background: var(--vp-c-default-soft); color: var(--vp-c-text-2);
+}
+.fet-badge[data-status="in-progress"] { background: var(--vp-c-warning-soft); color: var(--vp-c-warning-1); }
+.fet-badge[data-status="done"] { background: var(--vp-c-success-soft); color: var(--vp-c-success-1); }
+
+.fet-chip {
+  display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px;
+  background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1) !important; text-decoration: none !important;
+}
+
+.fet-avatar { border-radius: 50%; object-fit: cover; flex: none; }
+.fet-avatar--fallback {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1); font-weight: 700;
+}
+.fet-author { display: inline-flex; align-items: center; gap: 8px; color: var(--vp-c-text-1) !important; text-decoration: none !important; font-weight: 600; }
+
+/* Tombol login di navbar */
+.fet-auth { position: relative; display: flex; align-items: center; margin-left: 12px; }
+.fet-auth__me { background: none; border: 0; padding: 0; cursor: pointer; display: flex; }
+.fet-menu {
+  position: absolute; right: 0; top: calc(100% + 8px); min-width: 220px; z-index: 50;
+  display: flex; flex-direction: column; padding: 8px; border-radius: 12px;
+  background: var(--vp-c-bg-elv); box-shadow: var(--vp-shadow-3); border: 1px solid var(--vp-c-divider);
+}
+.fet-menu a, .fet-menu button {
+  text-align: left; padding: 8px 12px; border-radius: 6px; font-size: 14px; background: none; border: 0;
+  color: var(--vp-c-text-1); cursor: pointer; text-decoration: none;
+}
+.fet-menu a:hover, .fet-menu button:hover { background: var(--vp-c-default-soft); }
+.fet-menu__header { display: flex; flex-direction: column; padding: 8px 12px; border-bottom: 1px solid var(--vp-c-divider); margin-bottom: 4px; }
+
+/* Banner di halaman tahap roadmap */
+.fet-stage-banner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 12px 16px; margin-bottom: 24px; border-radius: 12px;
+  background: var(--vp-c-brand-soft);
+}
+.fet-stage-banner .fet-toolbar { margin: 0; }
+.fet-stage-banner__text { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 14px; }
+
+/* Ruang Belajar */
+.fet-room h1, .fet-post h1, .fet-profile h1 { font-size: 28px; font-weight: 700; line-height: 1.3; margin: 8px 0; }
+.fet-room h2, .fet-post h2, .fet-profile h2 { font-size: 20px; font-weight: 700; margin: 32px 0 8px; }
+.fet-room h3 { font-size: 18px; font-weight: 600; margin: 16px 0 4px; }
+.fet-room__header { margin-bottom: 8px; }
+.fet-room__footer { border-top: 1px solid var(--vp-c-divider); padding-top: 12px; margin-top: 24px; }
+
+.fet-stage-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 16px 0; }
+.fet-stage-card {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 6px; text-align: left;
+  padding: 14px 16px; border-radius: 12px; border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft); color: var(--vp-c-text-1) !important; text-decoration: none !important; cursor: pointer;
+}
+.fet-stage-card:hover { border-color: var(--vp-c-brand-1); }
+.fet-stage-card__num { font-size: 12px; color: var(--vp-c-text-2); font-weight: 600; }
+.fet-stage-card__title { font-weight: 600; }
+.fet-stage-grid--compact { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+
+.fet-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--vp-c-divider); overflow-x: auto; }
+.fet-tabs button {
+  padding: 8px 14px; border: 0; background: none; cursor: pointer; white-space: nowrap;
+  color: var(--vp-c-text-2); font-weight: 600; font-size: 14px; border-bottom: 2px solid transparent; margin-bottom: -1px;
+}
+.fet-tabs button.active { color: var(--vp-c-brand-1); border-bottom-color: var(--vp-c-brand-1); }
+.fet-tabs--main { margin: 16px 0; }
+
+.fet-segmented { display: inline-flex; border: 1px solid var(--vp-c-divider); border-radius: 20px; overflow: hidden; }
+.fet-segmented button { padding: 6px 14px; border: 0; background: none; cursor: pointer; font-size: 13px; color: var(--vp-c-text-2); }
+.fet-segmented button.active { background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1); font-weight: 600; }
+
+.fet-editor { border: 1px solid var(--vp-c-divider); border-radius: 8px; overflow: hidden; font-size: 13px; }
+.fet-editor .cm-editor { height: 360px; }
+.fet-editor .cm-editor.cm-focused { outline: none; }
+.fet-editor--tall .cm-editor { height: 480px; }
+
+.fet-playground { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.fet-playground .fet-tabs { border: 0; margin-bottom: 4px; }
+.fet-playground__preview { display: flex; flex-direction: column; }
+.fet-playground__preview .fet-toolbar { margin: 0 0 4px; min-height: 37px; }
+.fet-playground__preview iframe {
+  flex: 1; min-height: 360px; width: 100%; border: 1px solid var(--vp-c-divider); border-radius: 8px; background: #fff;
+}
+@media (max-width: 960px) { .fet-playground { grid-template-columns: 1fr; } }
+
+.fet-recorder ul { margin: 4px 0 12px; padding-left: 20px; list-style: disc; }
+.fet-recorder h4 { font-weight: 600; margin: 20px 0 8px; }
+.fet-recorder__live, .fet-recording video { width: 100%; max-width: 640px; border-radius: 8px; background: #000; }
+.fet-recording { display: grid; grid-template-columns: minmax(0, 320px) 1fr; gap: 16px; padding: 12px 0; border-top: 1px solid var(--vp-c-divider); }
+.fet-recording__meta { display: flex; flex-direction: column; gap: 4px; min-width: 0; word-break: break-all; }
+@media (max-width: 640px) { .fet-recording { grid-template-columns: 1fr; } }
+
+.fet-form { display: flex; flex-direction: column; gap: 12px; max-width: 720px; }
+.fet-form > .fet-btn { align-self: flex-start; }
+.fet-field { display: flex; flex-direction: column; gap: 4px; font-size: 14px; font-weight: 600; }
+.fet-field--inline { flex-direction: row; align-items: center; gap: 8px; }
+.fet-field input, .fet-field textarea, .fet-field select, .fet-form textarea {
+  font: inherit; font-weight: 400; padding: 8px 12px; border-radius: 8px;
+  border: 1px solid var(--vp-c-divider); background: var(--vp-c-bg); color: var(--vp-c-text-1);
+}
+.fet-field select { padding: 4px 8px; }
+.fet-field input:focus, .fet-field textarea:focus, .fet-form textarea:focus { outline: 2px solid var(--vp-c-brand-1); outline-offset: -1px; }
+.fet-check { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; }
+
+/* Komunitas */
+.fet-feed { display: flex; flex-direction: column; gap: 12px; margin: 16px 0; }
+.fet-post-card { padding: 16px; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.fet-post-card header, .fet-post-card footer, .fet-post__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.fet-post-card header { justify-content: space-between; }
+.fet-post-card__title { display: block; margin: 8px 0 4px; font-size: 18px; font-weight: 700; color: var(--vp-c-text-1) !important; text-decoration: none !important; }
+.fet-post-card__title:hover { color: var(--vp-c-brand-1) !important; }
+.fet-post-card p { margin: 4px 0 8px; }
+.fet-post__meta { margin: 8px 0 16px; }
+.fet-video { position: relative; aspect-ratio: 16 / 9; margin: 16px 0; }
+.fet-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 12px; }
+.fet-markdown { margin: 8px 0; }
+.fet-comment { padding: 12px 0; border-top: 1px solid var(--vp-c-divider); }
+.fet-comment .fet-post__meta { margin: 0; }
+
+.fet-profile__header { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+.fet-progress-bar { height: 8px; border-radius: 4px; background: var(--vp-c-default-soft); overflow: hidden; }
+.fet-progress-bar span { display: block; height: 100%; background: var(--vp-c-success-1); }
+
+.fet-page { max-width: 1280px; margin: 0 auto; padding: 32px 24px 64px; }
+@media (max-width: 640px) { .fet-page { padding: 24px 16px 48px; } }

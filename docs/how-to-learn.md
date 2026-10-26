@@ -25,7 +25,8 @@ dan tingkat 4 untuk topik yang ingin kamu kuasai betul.
 4. **Buktikan dengan eksperimen.** Setiap klaim yang penting diuji dengan kode kecil, DevTools,
    atau pengukuran. Simpan eksperimennya.
 5. **Bangun dari nol.** Kerjakan proyek latihan tingkat "deep" di halaman tahap.
-6. **Ajarkan.** Tulis ringkasan dengan kata-katamu sendiri, atau jadikan toolkit di `packages/`.
+6. **Ajarkan.** Rekam video penjelasan 3–5 menit di [Ruang Belajar](/ruang-belajar), bagikan ke
+   [Komunitas](/komunitas/), atau jadikan toolkit di `packages/`.
 
 ## 3. Kenapa catatan pribadi penting
 
