@@ -57,5 +57,5 @@ cara mengendalikan scope, specificity, dan konsistensi visual saat tim dan codeb
 
 ## Toolkit terkait
 
-- [`@chalidade/utils`](../../packages/utils): `cx`
+- [`@chalidade/utils`](../toolkit/utils.md): `cx`
 - (rencana) `@chalidade/tokens`

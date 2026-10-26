@@ -57,4 +57,4 @@ keputusan arsitektur, bukan sekadar pilihan framework.
 
 ## Toolkit terkait
 
-- (rencana) `apps/docs`: situs dokumentasi repo ini akan dibangun dengan SSG
+- Situs dokumentasi ini sendiri dibangun dengan SSG (VitePress)

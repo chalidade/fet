@@ -74,4 +74,4 @@ deterministik. Begitu algoritmanya dipahami, bug CSS jadi bisa diprediksi.
 ## Toolkit terkait
 
 - (rencana) `@chalidade/tokens`: design tokens sebagai custom properties
-- [`@chalidade/utils`](../../packages/utils): `cx` untuk className kondisional
+- [`@chalidade/utils`](../toolkit/utils.md): `cx` untuk className kondisional
