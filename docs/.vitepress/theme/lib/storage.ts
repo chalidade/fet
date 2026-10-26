@@ -61,3 +61,24 @@ export function starter(slug: string, title: string, lang: "id" | "en"): StageDr
     updatedAt: new Date().toISOString(),
   };
 }
+
+// Centang peta konsep per tahap: daftar nomor item (data-task) yang sudah dikuasai.
+const CHECK_PREFIX = "fet:checklist:";
+
+export function loadChecklist(slug: string): number[] {
+  try {
+    const raw = localStorage.getItem(CHECK_PREFIX + slug);
+    const list: unknown = raw ? JSON.parse(raw) : [];
+    return Array.isArray(list) ? list.filter((n): n is number => Number.isInteger(n)) : [];
+  } catch {
+    return [];
+  }
+}
+
+export function saveChecklist(slug: string, checked: number[]): void {
+  try {
+    localStorage.setItem(CHECK_PREFIX + slug, JSON.stringify(checked));
+  } catch {
+    // abaikan
+  }
+}

@@ -17,7 +17,7 @@ dan tingkat 4 untuk topik yang ingin kamu kuasai betul.
 
 ## 2. Siklus belajar per topik
 
-1. **Baca peta konsep** di halaman tahap. Centang yang sudah kamu kuasai sampai tingkat 2.
+1. **Baca peta konsep** di halaman tahap. Centang yang sudah kamu kuasai sampai tingkat 2. Centangnya tersimpan otomatis (di browser, atau di akunmu kalau sudah masuk).
 2. **Jawab Uji pemahaman dulu, sebelum belajar.** Tulis jawabanmu di `docs/notes/`. Jawaban
    yang ragu menandai bagian yang perlu dipelajari.
 3. **Pelajari dari sumber primer.** Spesifikasi (WHATWG, ECMA-262, CSSWG), MDN, dan source code

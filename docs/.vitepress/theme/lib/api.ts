@@ -61,6 +61,17 @@ export async function saveWork(stage: string, notes: string, code: Code): Promis
   check(await client().from("stage_work").upsert({ user_id: me(), stage, notes, code }));
 }
 
+// Kolom stage_work.checked ditambahkan oleh migrasi 20261027; kalau belum dijalankan,
+// pemanggil cukup jatuh ke penyimpanan lokal.
+export async function getChecklist(stage: string): Promise<number[] | null> {
+  const res = await client().from("stage_work").select("checked").eq("user_id", me()).eq("stage", stage).maybeSingle();
+  return (check(res) as { checked: number[] } | null)?.checked ?? null;
+}
+
+export async function saveChecklist(stage: string, checked: number[]): Promise<void> {
+  check(await client().from("stage_work").upsert({ user_id: me(), stage, checked }));
+}
+
 export async function getStatuses(userId: string): Promise<Record<string, Status>> {
   const rows = check(await client().from("stage_progress").select("stage, status").eq("user_id", userId)) as Array<{
     stage: string;

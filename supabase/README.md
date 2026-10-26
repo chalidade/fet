@@ -16,6 +16,9 @@ dirancang untuk dipakai di browser. **Jangan pernah menaruh `service_role` / sec
 2. Tempel isi [`migrations/20261026000000_init.sql`](migrations/20261026000000_init.sql), lalu klik **Run**.
 3. Cek di **Table Editor**: tabel `profiles`, `stage_progress`, `stage_work`, `posts`, `comments`,
    `reactions`, dan view `posts_feed`, `stage_stats` sudah ada.
+4. Jalankan juga migrasi berikutnya sesuai urutan nama file, misalnya
+   [`20261027000000_concept_checklist.sql`](migrations/20261027000000_concept_checklist.sql)
+   (menyimpan centang peta konsep ke akun). Sebelum dijalankan, centang tetap tersimpan di browser.
 
 Alternatif dengan CLI: `supabase link --project-ref bqyvtheczekghopzzgyo && supabase db push`.
 

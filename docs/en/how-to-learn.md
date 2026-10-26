@@ -17,7 +17,7 @@ on the topics you want to truly master.
 
 ## 2. The learning cycle for each topic
 
-1. **Read the concept map** on the stage page. Tick what you've mastered to level 2.
+1. **Read the concept map** on the stage page. Tick what you've mastered to level 2. Your ticks are saved automatically (in this browser, or to your account once you sign in).
 2. **Answer Check your understanding first, before studying.** Write your answers in `docs/notes/`.
    Wherever you hesitate marks what you need to learn.
 3. **Learn from primary sources.** Specifications (WHATWG, ECMA-262, CSSWG), MDN, and the tool's
