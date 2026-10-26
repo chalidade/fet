@@ -52,4 +52,4 @@ ukuran aplikasi, akses ke API native, dan berapa banyak kode yang bisa dipakai u
 
 ## Toolkit terkait
 
-- (rencana) `@chalidade/tokens` dirancang agar bisa dipakai di web dan React Native
+- [`@chalidade/tokens`](../toolkit/tokens.md): objek TypeScript-nya bisa dipakai di React Native, CSS-nya di web

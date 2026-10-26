@@ -44,6 +44,7 @@ function sidebar(lang: "id" | "en"): DefaultTheme.Sidebar {
           { text: "Browser Rendering Pipeline", link: `${p}/deep-dives/browser-rendering-pipeline` },
           { text: "CSS Cascade & Specificity", link: `${p}/deep-dives/css-cascade` },
           { text: "HTTP Caching", link: `${p}/deep-dives/http-caching` },
+          { text: t("Efisiensi di React", "Efficiency in React"), link: `${p}/deep-dives/react-efficiency` },
         ],
       },
     ],

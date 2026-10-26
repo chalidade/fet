@@ -58,4 +58,4 @@ sensors. Many features usually built with heavy libraries are already available 
 
 ## Related toolkit
 
-- (planned) `@chalidade/react-hooks`: `useMediaQuery`, `useLocalStorage`, `useOnline`, `useIntersectionObserver`
+- [`@chalidade/react-hooks`](../toolkit/react-hooks.md): `useMediaQuery`, `useLocalStorage`, `useOnline`, `useIntersectionObserver`

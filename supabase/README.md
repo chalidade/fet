@@ -19,6 +19,8 @@ dirancang untuk dipakai di browser. **Jangan pernah menaruh `service_role` / sec
 4. Jalankan juga migrasi berikutnya sesuai urutan nama file, misalnya
    [`20261027000000_concept_checklist.sql`](migrations/20261027000000_concept_checklist.sql)
    (menyimpan centang peta konsep ke akun). Sebelum dijalankan, centang tetap tersimpan di browser.
+   Lalu [`20261028000000_public_checklist.sql`](migrations/20261028000000_public_checklist.sql)
+   (menampilkan konsep yang dicentang di halaman Bukti Belajar untuk orang lain; catatan dan kode tetap privat).
 
 Alternatif dengan CLI: `supabase link --project-ref bqyvtheczekghopzzgyo && supabase db push`.
 

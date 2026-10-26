@@ -6,5 +6,7 @@ export { useIsomorphicLayoutEffect } from "./useIsomorphicLayoutEffect";
 export { useLatest } from "./useLatest";
 export { useLocalStorage, type LocalStorageOptions } from "./useLocalStorage";
 export { useMediaQuery } from "./useMediaQuery";
+export { useOnline } from "./useOnline";
 export { useOnClickOutside } from "./useOnClickOutside";
 export { usePrevious } from "./usePrevious";
+export { useThrottledCallback, type ThrottledCallback } from "./useThrottledCallback";

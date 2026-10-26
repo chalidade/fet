@@ -58,4 +58,4 @@ sensor. Banyak fitur yang biasanya dibuat dengan library berat sebenarnya sudah 
 
 ## Toolkit terkait
 
-- (rencana) `@chalidade/react-hooks`: `useMediaQuery`, `useLocalStorage`, `useOnline`, `useIntersectionObserver`
+- [`@chalidade/react-hooks`](../toolkit/react-hooks.md): `useMediaQuery`, `useLocalStorage`, `useOnline`, `useIntersectionObserver`

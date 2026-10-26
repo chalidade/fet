@@ -26,6 +26,7 @@ const { lang, s } = useLang();
       </div>
       <a role="menuitem" :href="href(paths(lang).profile(session.profile?.username))"><Icon name="user" /> {{ s.auth.myProfile }}</a>
       <a role="menuitem" :href="href(paths(lang).room())"><Icon name="code" /> {{ s.auth.myRoom }}</a>
+      <a role="menuitem" :href="href(paths(lang).evidence(session.profile?.username))"><Icon name="award" /> {{ s.evidence.open }}</a>
       <hr />
       <button role="menuitem" @click="signOut()"><Icon name="logout" /> {{ s.auth.signOut }}</button>
     </DropMenu>

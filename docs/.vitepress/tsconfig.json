@@ -1,7 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "types": ["vitepress/client"],
+    "types": ["vitepress/client", "node"],
     "declaration": false,
     "noEmit": true,
     "exactOptionalPropertyTypes": false

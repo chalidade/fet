@@ -42,13 +42,16 @@ penjelasan (disimpan ke Google Drive milik user), dan tombol untuk membagikan ha
 **Komunitas**. Login dengan GitHub/Google, data disimpan di Supabase. Panduan setup ada di
 [`supabase/README.md`](supabase/README.md).
 
+Halaman **Bukti Belajar** (`/bukti-belajar?u=<username>`) merangkum tahap yang selesai, konsep yang
+dikuasai, dan hasil yang dipublikasikan dalam satu halaman yang bisa dibagikan atau dicetak ke PDF.
+
 ## Toolkit (packages)
 
 | Package | Isi | Status |
 | --- | --- | --- |
 | [`@chalidade/utils`](packages/utils) | `debounce`, `throttle`, `cx`, `clamp` | ✅ siap, belum dipublish |
 | [`@chalidade/tokens`](packages/tokens) | Design tokens (warna, spacing, tipografi, motion) sebagai CSS variables + TS, dengan mode gelap | ✅ siap, belum dipublish |
-| [`@chalidade/react-hooks`](packages/react-hooks) | `useDebouncedValue`, `useMediaQuery`, `useLocalStorage`, `useIntersectionObserver`, … | ✅ siap, belum dipublish |
+| [`@chalidade/react-hooks`](packages/react-hooks) | `useDebouncedValue`, `useThrottledCallback`, `useMediaQuery`, `useLocalStorage`, `useOnline`, … | ✅ siap, belum dipublish |
 | `@chalidade/ui` | Komponen aksesibel (Button, Dialog, Tabs, Combobox, …) | 🗓️ rencana |
 
 > Semua package dipublish di bawah scope npm `@chalidade/*`. Belum ada yang dipublish ke npm.

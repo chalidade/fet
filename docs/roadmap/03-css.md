@@ -73,6 +73,6 @@ deterministik. Begitu algoritmanya dipahami, bug CSS jadi bisa diprediksi.
 
 ## Toolkit terkait
 
-- (rencana) `@chalidade/tokens`: design tokens sebagai custom properties
+- [`@chalidade/tokens`](../toolkit/tokens.md): design tokens sebagai custom properties
 - [`@chalidade/utils`](../toolkit/utils.md): `cx` untuk className kondisional
 - Deep dive: [CSS Cascade & Specificity](../deep-dives/css-cascade.md)

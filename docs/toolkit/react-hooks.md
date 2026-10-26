@@ -20,6 +20,8 @@ Membutuhkan React 18 atau lebih baru (`useSyncExternalStore`).
 | --- | --- |
 | [`useDebouncedValue`](#usedebouncedvalue) | Nilai yang menunggu input berhenti (search) |
 | [`useDebouncedCallback`](#usedebouncedcallback) | Fungsi debounce yang stabil antar render (autosave) |
+| [`useThrottledCallback`](#usethrottledcallback) | Maksimal sekali per interval (scroll, resize, drag) |
+| [`useOnline`](#useonline) | Status koneksi untuk banner offline |
 | [`useMediaQuery`](#usemediaquery) | Responsif di JS tanpa hydration mismatch |
 | [`useLocalStorage`](#uselocalstorage) | State yang tersimpan dan sinkron antar tab |
 | [`useEventListener`](#useeventlistener) | Listener yang otomatis dilepas |
@@ -49,6 +51,23 @@ yang menunggu dibatalkan saat komponen unmount, jadi tidak ada `setState` setela
 const save = useDebouncedCallback((draft: string) => api.save(draft), 1000);
 
 <textarea onChange={(e) => save(e.target.value)} onBlur={() => save.flush()} />
+```
+
+## `useThrottledCallback`
+
+Panggilan pertama langsung jalan, sisanya di jendela yang sama digabung menjadi satu panggilan di
+akhir jendela dengan argumen terbaru. Cocok untuk event yang terus menyala selama interaksi.
+
+```tsx
+const onScroll = useThrottledCallback(() => setProgress(readScrollProgress()), 100);
+useEventListener(window, "scroll", onScroll, { passive: true });
+```
+
+## `useOnline`
+
+```tsx
+const online = useOnline();
+return online ? null : <p role="status">Kamu sedang offline. Perubahan disimpan lokal.</p>;
 ```
 
 ## `useMediaQuery`

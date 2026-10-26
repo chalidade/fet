@@ -58,4 +58,4 @@ how you keep scope, specificity, and visual consistency under control as your te
 ## Related toolkit
 
 - [`@chalidade/utils`](../toolkit/utils.md): `cx`
-- (planned) `@chalidade/tokens`
+- [`@chalidade/tokens`](../toolkit/tokens.md): primitive + semantic tokens, light/dark themes

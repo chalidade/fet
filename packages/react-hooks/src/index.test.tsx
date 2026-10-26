@@ -9,7 +9,9 @@ import {
   useLocalStorage,
   useMediaQuery,
   useOnClickOutside,
+  useOnline,
   usePrevious,
+  useThrottledCallback,
 } from "./index";
 
 describe("debounce", () => {
@@ -184,5 +186,47 @@ describe("useIntersectionObserver", () => {
     expect(getByText("terlihat")).toBeTruthy();
     expect(disconnect).toHaveBeenCalled();
     vi.unstubAllGlobals();
+  });
+});
+
+describe("useThrottledCallback", () => {
+  beforeEach(() => vi.useFakeTimers());
+  afterEach(() => vi.useRealTimers());
+
+  it("langsung jalan, lalu menggabungkan sisa panggilan jadi satu di akhir jendela", () => {
+    const fn = vi.fn();
+    const { result } = renderHook(() => useThrottledCallback(fn, 100));
+    result.current(1);
+    result.current(2);
+    result.current(3);
+    expect(fn).toHaveBeenCalledTimes(1);
+    expect(fn).toHaveBeenLastCalledWith(1);
+    act(() => vi.advanceTimersByTime(100));
+    expect(fn).toHaveBeenCalledTimes(2);
+    expect(fn).toHaveBeenLastCalledWith(3);
+  });
+
+  it("panggilan susulan batal saat unmount", () => {
+    const fn = vi.fn();
+    const { result, unmount } = renderHook(() => useThrottledCallback(fn, 100));
+    result.current(1);
+    result.current(2);
+    unmount();
+    vi.advanceTimersByTime(200);
+    expect(fn).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe("useOnline", () => {
+  it("mengikuti event online/offline", () => {
+    const spy = vi.spyOn(navigator, "onLine", "get").mockReturnValue(true);
+    const { result } = renderHook(() => useOnline());
+    expect(result.current).toBe(true);
+    spy.mockReturnValue(false);
+    act(() => {
+      window.dispatchEvent(new Event("offline"));
+    });
+    expect(result.current).toBe(false);
+    spy.mockRestore();
   });
 });
