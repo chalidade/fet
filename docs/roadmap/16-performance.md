@@ -65,3 +65,4 @@ hanyalah tebakan.
 - [`@chalidade/utils`](../toolkit/utils.md): `debounce`, `throttle`
 - (rencana) `@chalidade/react-hooks`: `useIntersectionObserver`, `useVirtualList`
 - Deep dive: [Browser Rendering Pipeline](../deep-dives/browser-rendering-pipeline.md)
+- Deep dive: [HTTP Caching](../deep-dives/http-caching.md)
