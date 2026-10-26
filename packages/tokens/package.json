@@ -1,0 +1,26 @@
+{
+  "name": "@chalidade/tokens",
+  "version": "0.0.0",
+  "description": "Design tokens (warna, spacing, tipografi, radius, shadow, motion) sebagai objek TypeScript dan CSS variables.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./tokens.css": "./dist/tokens.css"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean && node scripts/emit-css.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  }
+}

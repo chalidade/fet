@@ -47,8 +47,8 @@ penjelasan (disimpan ke Google Drive milik user), dan tombol untuk membagikan ha
 | Package | Isi | Status |
 | --- | --- | --- |
 | [`@chalidade/utils`](packages/utils) | `debounce`, `throttle`, `cx`, `clamp` | ✅ siap, belum dipublish |
-| `@chalidade/tokens` | Design tokens (warna, spacing, tipografi) sebagai CSS variables + TS | 🗓️ rencana |
-| `@chalidade/react-hooks` | `useDebounce`, `useMediaQuery`, `useIntersectionObserver`, … | 🗓️ rencana |
+| [`@chalidade/tokens`](packages/tokens) | Design tokens (warna, spacing, tipografi, motion) sebagai CSS variables + TS, dengan mode gelap | ✅ siap, belum dipublish |
+| [`@chalidade/react-hooks`](packages/react-hooks) | `useDebouncedValue`, `useMediaQuery`, `useLocalStorage`, `useIntersectionObserver`, … | ✅ siap, belum dipublish |
 | `@chalidade/ui` | Komponen aksesibel (Button, Dialog, Tabs, Combobox, …) | 🗓️ rencana |
 
 > Semua package dipublish di bawah scope npm `@chalidade/*`. Belum ada yang dipublish ke npm.

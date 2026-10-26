@@ -61,6 +61,8 @@ function sidebar(lang: "id" | "en"): DefaultTheme.Sidebar {
         items: [
           { text: t("Ringkasan", "Overview"), link: `${p}/toolkit/` },
           { text: "@chalidade/utils", link: `${p}/toolkit/utils` },
+          { text: "@chalidade/tokens", link: `${p}/toolkit/tokens` },
+          { text: "@chalidade/react-hooks", link: `${p}/toolkit/react-hooks` },
         ],
       },
     ],
