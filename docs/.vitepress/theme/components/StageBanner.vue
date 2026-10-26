@@ -7,6 +7,7 @@ import { getStatuses, stageStats } from "../lib/api";
 import { loadDraft, type Status } from "../lib/storage";
 import { href, paths } from "../lib/routes";
 import { useLang } from "../lib/useLang";
+import Icon from "./Icon.vue";
 
 const route = useRoute();
 const { lang, s } = useLang();
@@ -40,17 +41,19 @@ watch(
 <template>
   <div v-if="stage" class="fet-stage-banner">
     <div class="fet-stage-banner__text">
-      <span v-if="status !== 'not-started'" class="fet-badge" :data-status="status">{{ s.status[status] }}</span>
-      <span v-if="stats" class="fet-muted">
-        {{ s.banner.learning(stats.learning) }} · {{ s.banner.done(stats.done) }}
+      <strong>{{ s.banner.pitch }}</strong>
+      <span class="fet-muted">{{ s.banner.pitchSub }}</span>
+      <span class="fet-row fet-small" style="margin-top: 4px">
+        <span v-if="status !== 'not-started'" class="fet-badge" :data-status="status">{{ s.status[status] }}</span>
+        <span v-if="stats" class="fet-muted fet-meta-item">
+          <Icon name="users" :size="14" /> {{ s.banner.learning(stats.learning) }} · {{ s.banner.done(stats.done) }}
+        </span>
       </span>
     </div>
-    <div class="fet-toolbar">
+    <div class="fet-stage-banner__actions">
+      <a v-if="isConfigured" class="fet-link fet-small" :href="href(paths(lang).community(stage.slug))">{{ s.banner.community }}</a>
       <a class="fet-btn" :href="href(paths(lang).room(stage.slug))">
-        {{ status === "not-started" ? s.banner.start : s.banner.continue }} →
-      </a>
-      <a v-if="isConfigured" class="fet-btn fet-btn--ghost" :href="href(paths(lang).community(stage.slug))">
-        {{ s.banner.community }}
+        {{ status === "not-started" ? s.banner.start : s.banner.continue }} <Icon name="arrow-right" />
       </a>
     </div>
   </div>

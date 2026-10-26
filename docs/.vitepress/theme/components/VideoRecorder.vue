@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, ref } from "vue";
 import * as drive from "../lib/drive";
+import Icon from "./Icon.vue";
 import { useLang } from "../lib/useLang";
 
 const props = defineProps<{ stage: string }>();
@@ -146,60 +147,73 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="fet-recorder">
-    <p>{{ s.video.why }}</p>
-    <p class="fet-muted">{{ s.video.ideas }}</p>
-    <ul class="fet-muted">
-      <li v-for="idea in s.video.ideaList" :key="idea">{{ idea }}</li>
-    </ul>
-
-    <p v-if="!supported" class="fet-alert">{{ s.video.unsupported }}</p>
-    <template v-else>
-      <div class="fet-toolbar">
-        <div class="fet-segmented" role="radiogroup">
-          <button role="radio" :aria-checked="mode === 'camera'" :class="{ active: mode === 'camera' }" :disabled="recording" @click="mode = 'camera'">
-            🎥 {{ s.video.camera }}
-          </button>
-          <button role="radio" :aria-checked="mode === 'screen'" :class="{ active: mode === 'screen' }" :disabled="recording" @click="mode = 'screen'">
-            🖥️ {{ s.video.screen }}
-          </button>
+    <div class="fet-rec">
+      <div>
+        <div class="fet-rec__stage">
+          <video v-show="recording" ref="live" muted playsinline />
+          <div v-if="!recording" class="fet-rec__placeholder">
+            <Icon :name="mode === 'camera' ? 'video' : 'monitor'" :size="32" />
+            <span>{{ supported ? s.video.preview : s.video.unsupported }}</span>
+          </div>
+          <span v-if="recording" class="fet-rec__timer">{{ mmss(elapsed) }}</span>
         </div>
-        <button v-if="!recording" class="fet-btn" @click="start">● {{ s.video.start }}</button>
-        <button v-else class="fet-btn fet-btn--danger" @click="stop">■ {{ s.video.stop }} ({{ mmss(elapsed) }})</button>
-      </div>
-      <p v-if="error" class="fet-alert">{{ error }}</p>
-      <video v-show="recording" ref="live" class="fet-recorder__live" muted playsinline />
-    </template>
-
-    <p v-if="!drive.isConfigured" class="fet-muted fet-small">{{ s.video.driveOff }}</p>
-    <p v-else class="fet-muted fet-small">{{ s.video.drivePrivacy }}</p>
-
-    <h4>{{ s.video.recordings }}</h4>
-    <p v-if="!recordings.length" class="fet-muted">{{ s.video.none }}</p>
-    <div v-for="rec in recordings" :key="rec.id" class="fet-recording">
-      <video :src="rec.url" controls playsinline />
-      <div class="fet-recording__meta">
-        <strong>{{ rec.name }}</strong>
-        <span class="fet-muted">{{ mmss(rec.duration) }}</span>
-        <div class="fet-toolbar">
-          <a class="fet-btn fet-btn--small fet-btn--ghost" :href="rec.url" :download="rec.name">⬇ {{ s.video.download }}</a>
-          <button
-            v-if="drive.isConfigured && !rec.driveLink"
-            class="fet-btn fet-btn--small"
-            :disabled="rec.uploading"
-            @click="toDrive(rec)"
-          >
-            {{ rec.uploading ? s.video.uploading : s.video.toDrive }}
-          </button>
-          <a v-if="rec.driveLink" class="fet-btn fet-btn--small fet-btn--ghost" :href="rec.driveLink" target="_blank" rel="noopener">
-            ✓ {{ s.video.inDrive }}
-          </a>
-          <button v-if="rec.driveLink" class="fet-btn fet-btn--small" @click="useInPost(rec)">
-            {{ s.video.useInPost }}
-          </button>
-          <button class="fet-btn fet-btn--small fet-btn--ghost" @click="remove(rec)">{{ s.common.delete }}</button>
+        <div v-if="supported" class="fet-rec__controls">
+          <div class="fet-seg" role="radiogroup">
+            <button role="radio" :aria-checked="mode === 'camera'" :class="{ active: mode === 'camera' }" :disabled="recording" @click="mode = 'camera'">
+              <Icon name="video" /> {{ s.video.camera }}
+            </button>
+            <button role="radio" :aria-checked="mode === 'screen'" :class="{ active: mode === 'screen' }" :disabled="recording" @click="mode = 'screen'">
+              <Icon name="monitor" /> {{ s.video.screen }}
+            </button>
+          </div>
+          <button v-if="!recording" class="fet-rec__btn" @click="start"><span class="dot" /> {{ s.video.start }}</button>
+          <button v-else class="fet-rec__btn recording" @click="stop"><span class="dot" /> {{ s.video.stop }} · {{ mmss(elapsed) }}</button>
         </div>
-        <p v-if="rec.error" class="fet-alert">{{ rec.error }}</p>
+        <p v-if="error" class="fet-alert">{{ error }}</p>
       </div>
+
+      <aside class="fet-card fet-rec__tips">
+        <h3>{{ s.video.ideas }}</h3>
+        <p class="fet-muted fet-small">{{ s.video.why }}</p>
+        <ul>
+          <li v-for="idea in s.video.ideaList" :key="idea">{{ idea }}</li>
+        </ul>
+        <p class="fet-hint" style="margin: 16px 0 0">
+          <Icon name="cloud" /> {{ drive.isConfigured ? s.video.drivePrivacy : s.video.driveOff }}
+        </p>
+      </aside>
     </div>
+
+    <template v-if="recordings.length">
+      <h3 style="margin: 28px 0 12px">{{ s.video.recordings }}</h3>
+      <div class="fet-rec-list">
+        <div v-for="rec in recordings" :key="rec.id" class="fet-card fet-rec-item">
+          <video :src="rec.url" controls playsinline />
+          <div class="fet-rec-item__meta">
+            <span class="fet-rec-item__name" :title="rec.name">{{ rec.name }}</span>
+            <span class="fet-muted fet-small">{{ mmss(rec.duration) }}</span>
+            <div class="fet-row">
+              <button
+                v-if="drive.isConfigured && !rec.driveLink"
+                class="fet-btn fet-btn--sm"
+                :disabled="rec.uploading"
+                @click="toDrive(rec)"
+              >
+                <Icon name="cloud" /> {{ rec.uploading ? s.video.uploading : s.video.toDrive }}
+              </button>
+              <button v-if="rec.driveLink" class="fet-btn fet-btn--sm" @click="useInPost(rec)">
+                <Icon name="send" /> {{ s.video.useInPost }}
+              </button>
+              <a v-if="rec.driveLink" class="fet-btn fet-btn--sm fet-btn--ghost" :href="rec.driveLink" target="_blank" rel="noopener">
+                <Icon name="check" /> {{ s.video.inDrive }}
+              </a>
+              <a class="fet-btn fet-btn--sm fet-btn--ghost" :href="rec.url" :download="rec.name"><Icon name="download" /> {{ s.video.download }}</a>
+              <button class="fet-icon-btn" :title="s.common.delete" :aria-label="s.common.delete" @click="remove(rec)"><Icon name="trash" /></button>
+            </div>
+            <p v-if="rec.error" class="fet-alert">{{ rec.error }}</p>
+          </div>
+        </div>
+      </div>
+    </template>
   </div>
 </template>

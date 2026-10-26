@@ -2,6 +2,8 @@
 import { computed, onMounted, ref, watch } from "vue";
 import UserAvatar from "./UserAvatar.vue";
 import CodePlayground from "./CodePlayground.vue";
+import DropMenu from "./DropMenu.vue";
+import Icon from "./Icon.vue";
 import { findStage } from "../../stages";
 import { isConfigured, session, signIn } from "../lib/supabase";
 import * as api from "../lib/api";
@@ -87,9 +89,10 @@ async function removeComment(c: api.Comment) {
   comments.value = comments.value.filter((x) => x.id !== c.id);
 }
 
-async function removePost() {
+async function removePost(e: MouseEvent) {
   if (!post.value) return;
   if (!confirmDelete.value) {
+    e.stopPropagation();
     confirmDelete.value = true;
     setTimeout(() => (confirmDelete.value = false), 3000);
     return;
@@ -100,77 +103,97 @@ async function removePost() {
 </script>
 
 <template>
-  <div class="fet-post">
-    <a class="fet-link" :href="href(paths(lang).community())">← {{ s.community.back }}</a>
+  <article class="fet-post">
+    <a class="fet-link fet-link--muted fet-small" :href="href(paths(lang).community())">
+      <Icon name="arrow-left" :size="14" /> {{ s.community.back }}
+    </a>
 
     <p v-if="state === 'loading'" class="fet-muted">{{ s.common.loading }}</p>
     <p v-else-if="state === 'missing'" class="fet-callout">{{ isConfigured ? s.community.notFound : s.common.notConfigured }}</p>
     <p v-else-if="state === 'error'" class="fet-alert">{{ s.common.error }}: {{ error }}</p>
 
     <template v-else-if="post">
-      <h1>{{ post.title }}</h1>
-      <div class="fet-post__meta">
-        <a :href="href(paths(lang).profile(post.username))" class="fet-author">
-          <UserAvatar :name="post.display_name || post.username" :src="post.avatar_url" :size="32" />
-          <span>{{ post.display_name || post.username }}</span>
-        </a>
-        <span class="fet-muted">{{ formatDate(post.created_at, lang) }}</span>
-        <a v-if="stage" class="fet-chip" :href="href(paths(lang).stage(stage.slug))">{{ stage.slug.slice(0, 2) }} · {{ stage.title }}</a>
-        <span class="spacer" />
-        <button v-if="isMine" class="fet-btn fet-btn--small fet-btn--ghost" @click="removePost">
-          {{ confirmDelete ? s.common.confirmDelete : s.common.delete }}
-        </button>
-      </div>
+      <header class="fet-post__head">
+        <div v-if="stage"><a class="fet-chip" :href="href(paths(lang).stage(stage.slug))">{{ stage.slug.slice(0, 2) }} · {{ stage.title }}</a></div>
+        <h1>{{ post.title }}</h1>
+        <div class="fet-post__byline">
+          <a :href="href(paths(lang).profile(post.username))" class="fet-author">
+            <UserAvatar :name="post.display_name || post.username" :src="post.avatar_url" :size="36" />
+          </a>
+          <div class="who">
+            <a :href="href(paths(lang).profile(post.username))" class="fet-author">{{ post.display_name || post.username }}</a>
+            <span class="fet-muted fet-small">{{ formatDate(post.created_at, lang) }}</span>
+          </div>
+          <span class="spacer" />
+          <DropMenu v-if="isMine" :label="s.community.postActions">
+            <template #trigger><span class="fet-icon-btn"><Icon name="more" /></span></template>
+            <button role="menuitem" class="is-danger" @click="removePost">
+              <Icon name="trash" /> {{ confirmDelete ? s.common.confirmDelete : s.community.deletePost }}
+            </button>
+          </DropMenu>
+        </div>
+      </header>
 
       <div v-if="video" class="fet-video">
         <iframe :src="video" title="Video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen />
       </div>
       <p v-else-if="post.video_url">
-        <a :href="post.video_url" target="_blank" rel="noopener noreferrer nofollow">🎬 {{ s.community.openVideo }}</a>
+        <a class="fet-btn fet-btn--ghost" :href="post.video_url" target="_blank" rel="noopener noreferrer nofollow">
+          <Icon name="video" /> {{ s.community.openVideo }}
+        </a>
       </p>
 
       <!-- renderMarkdown memakai markdown-it dengan html: false, jadi input user di-escape. -->
       <div class="vp-doc fet-markdown" v-html="renderMarkdown(post.body)" />
 
       <template v-if="post.code">
-        <h3>{{ s.community.code }}</h3>
+        <h2>{{ s.community.code }}</h2>
         <CodePlayground :model-value="post.code" readonly />
       </template>
 
-      <div class="fet-toolbar">
+      <div class="fet-post__actions">
         <button class="fet-btn fet-btn--ghost" :class="{ active: reacted }" :aria-pressed="reacted" @click="toggleLike">
-          👍 {{ s.community.like }} · {{ post.reaction_count }}
+          <Icon name="heart" /> {{ s.community.like }} · {{ post.reaction_count }}
         </button>
+        <span class="fet-meta-item fet-muted fet-small"><Icon name="comment" :size="14" /> {{ comments.length }}</span>
       </div>
 
-      <h2>{{ s.community.comments }} ({{ comments.length }})</h2>
-      <p v-if="!comments.length" class="fet-muted">{{ s.community.noComments }}</p>
-      <div v-for="c in comments" :key="c.id" class="fet-comment">
-        <div class="fet-post__meta">
-          <a v-if="c.profiles" :href="href(paths(lang).profile(c.profiles.username))" class="fet-author">
-            <UserAvatar :name="c.profiles.display_name || c.profiles.username" :src="c.profiles.avatar_url" :size="24" />
-            <span>{{ c.profiles.display_name || c.profiles.username }}</span>
-          </a>
-          <span class="fet-muted fet-small">{{ formatDate(c.created_at, lang) }}</span>
-          <span class="spacer" />
-          <button v-if="session.user?.id === c.user_id" class="fet-link fet-small" @click="removeComment(c)">{{ s.common.delete }}</button>
+      <section class="fet-comments">
+        <h2>{{ s.community.comments }}</h2>
+        <p v-if="!comments.length" class="fet-muted fet-small">{{ s.community.noComments }}</p>
+        <div v-for="c in comments" :key="c.id" class="fet-comment">
+          <UserAvatar v-if="c.profiles" :name="c.profiles.display_name || c.profiles.username" :src="c.profiles.avatar_url" :size="32" />
+          <span v-else />
+          <div>
+            <div class="fet-comment__head">
+              <a v-if="c.profiles" :href="href(paths(lang).profile(c.profiles.username))" class="fet-author">
+                {{ c.profiles.display_name || c.profiles.username }}
+              </a>
+              <span class="fet-muted">{{ formatDate(c.created_at, lang) }}</span>
+              <span class="spacer" />
+              <button v-if="session.user?.id === c.user_id" class="fet-link fet-link--muted fet-small" @click="removeComment(c)">{{ s.common.delete }}</button>
+            </div>
+            <div class="vp-doc fet-markdown" v-html="renderMarkdown(c.body)" />
+          </div>
         </div>
-        <div class="vp-doc fet-markdown" v-html="renderMarkdown(c.body)" />
-      </div>
 
-      <form v-if="session.user" class="fet-form" @submit.prevent="send">
-        <textarea v-model="commentBody" rows="3" maxlength="5000" :placeholder="s.community.writeComment" />
-        <div class="fet-toolbar">
-          <button class="fet-btn fet-btn--small" type="submit" :disabled="sending || !commentBody.trim()">{{ s.community.send }}</button>
+        <div v-if="session.user" class="fet-composer">
+          <UserAvatar :name="session.profile?.display_name || session.profile?.username || '?'" :src="session.profile?.avatar_url" :size="32" />
+          <form class="fet-form" @submit.prevent="send">
+            <textarea v-model="commentBody" rows="3" maxlength="5000" :placeholder="s.community.writeComment" />
+            <div class="fet-form__actions">
+              <button class="fet-btn fet-btn--sm" type="submit" :disabled="sending || !commentBody.trim()"><Icon name="send" /> {{ s.community.send }}</button>
+            </div>
+          </form>
         </div>
-      </form>
-      <div v-else class="fet-callout">
-        <span>{{ s.auth.needLogin }}</span>
-        <div class="fet-toolbar">
-          <button class="fet-btn fet-btn--small" @click="signIn('github')">{{ s.auth.withGithub }}</button>
-          <button class="fet-btn fet-btn--small fet-btn--ghost" @click="signIn('google')">{{ s.auth.withGoogle }}</button>
+        <div v-else class="fet-callout">
+          <span>{{ s.auth.needLogin }}</span>
+          <div class="fet-row">
+            <button class="fet-btn fet-btn--sm" @click="signIn('github')"><Icon name="github" /> GitHub</button>
+            <button class="fet-btn fet-btn--sm fet-btn--ghost" @click="signIn('google')"><Icon name="mail" /> Google</button>
+          </div>
         </div>
-      </div>
+      </section>
     </template>
-  </div>
+  </article>
 </template>
