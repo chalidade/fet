@@ -1,0 +1,22 @@
+# Deep Dives
+
+The topics here go deeper than the roadmap. Each one explains the **mechanism** behind something you
+usually just use, with experiments you can run yourself.
+
+| Topic | Status | Related stages |
+| --- | --- | --- |
+| [Event Loop](event-loop.md) | ✅ | 04, 16 |
+| [Browser Rendering Pipeline](browser-rendering-pipeline.md) | ✅ | 03, 16 |
+| How V8 works: parsing, Ignition, TurboFan, hidden classes | 🗓️ | 04 |
+| The accessibility tree & how screen readers work | 🗓️ | 02 |
+| React Fiber from the source code | 🗓️ | 07 |
+| Signals: from Knockout to the TC39 proposal | 🗓️ | 07 |
+| A module bundler from scratch | 🗓️ | 09 |
+| Design systems: tokens, governance, versioning | 🗓️ | 08 |
+| State management: mental models, not libraries | 🗓️ | 07, 19 |
+| Micro-frontends: when and when not | 🗓️ | 09, 18 |
+| Front-end observability: error tracking, RUM, tracing | 🗓️ | 16 |
+| Internationalization (i18n): `Intl`, plural rules, RTL | 🗓️ | 02, 03 |
+
+Every deep dive follows this format: **opening question → mental model → detailed mechanism →
+experiments → practical implications → primary sources.**

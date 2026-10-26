@@ -1,7 +1,7 @@
 # Catatan Eksperimen
 
 Folder ini untuk hal yang tidak bisa ditemukan di artikel mana pun: **hasil eksperimen dan
-pengukuranmu sendiri.** Lihat [Metode Belajar §3](../how-to-learn.md#3-kenapa-catatan-pribadi-penting).
+pengukuranmu sendiri.** Lihat [Metode Belajar §3](../how-to-learn.md).
 
 Format nama file: `YYYY-MM-DD-judul-singkat.md`
 

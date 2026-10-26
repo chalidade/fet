@@ -60,4 +60,4 @@ bug "di mesin saya jalan" dan duplikasi package di bundle.
 
 ## Toolkit terkait
 
-- Repo ini adalah contoh monorepo pnpm. Lihat [`packages/utils/package.json`](../../packages/utils/package.json)
+- Repo ini adalah contoh monorepo pnpm. Lihat [`packages/utils/package.json`](https://github.com/chalidade/fet/blob/main/packages/utils/package.json)

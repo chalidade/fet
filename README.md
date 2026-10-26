@@ -1,5 +1,7 @@
 # fet: Front-End Toolkits
 
+📖 **Dokumentasi / Documentation: [chalidade.github.io/fet](https://chalidade.github.io/fet/)** (Bahasa Indonesia · [English](https://chalidade.github.io/fet/en/))
+
 Tempat untuk **deep dive front-end**: roadmap yang lengkap, cara belajar tiap tahapnya,
 dan toolkit yang bisa langsung di-install di project.
 
@@ -14,20 +16,20 @@ Repo ini tidak berhenti di "apa yang perlu dipelajari". Tiap topik menjawab empa
 
 ```
 fet/
-├── docs/
+├── docs/               # situs dokumentasi (VitePress); docs/en = versi English
 │   ├── roadmap/        # 20 tahap dalam 8 fase, mulai dari sini
 │   ├── deep-dives/     # topik yang lebih dalam dari roadmap (browser internals, dll.)
 │   ├── notes/          # catatan eksperimen & pengukuran pribadi
 │   ├── templates/      # template untuk menulis topik baru
+│   ├── toolkit/        # dokumentasi package
 │   └── how-to-learn.md # metode belajar yang dipakai di seluruh repo
-├── packages/           # toolkit yang bisa di-install (npm)
-│   └── utils/          # @chalidade/utils: debounce, throttle, cx, clamp
-└── apps/               # (rencana) situs dokumentasi & playground komponen
+└── packages/           # toolkit yang bisa di-install (npm)
+    └── utils/          # @chalidade/utils: debounce, throttle, cx, clamp
 ```
 
 ## Mulai dari mana?
 
-- **Baru mulai / ingin mengisi celah:** baca [metode belajar](docs/how-to-learn.md), lalu [peta roadmap](docs/roadmap/README.md).
+- **Baru mulai / ingin mengisi celah:** baca [metode belajar](docs/how-to-learn.md), lalu [peta roadmap](docs/roadmap/index.md).
 - **Sudah berpengalaman:** loncat ke bagian *Uji pemahaman* di setiap tahap. Topik yang
   pertanyaannya tidak bisa kamu jawab dengan yakin adalah tempat untuk deep dive.
 - **Butuh toolkit:** lihat [`packages/`](packages).
@@ -51,6 +53,7 @@ pnpm test        # vitest di semua package
 pnpm typecheck
 pnpm build       # tsup → ESM + CJS + .d.ts
 pnpm changeset   # catat perubahan sebelum rilis
+pnpm docs:dev    # jalankan situs dokumentasi di http://localhost:5173/fet/
 ```
 
 Referensi awal roadmap: [roadmap.sh/frontend](https://roadmap.sh/frontend). Struktur dan isinya

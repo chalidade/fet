@@ -62,6 +62,6 @@ hanyalah tebakan.
 
 ## Toolkit terkait
 
-- [`@chalidade/utils`](../../packages/utils): `debounce`, `throttle`
+- [`@chalidade/utils`](../toolkit/utils.md): `debounce`, `throttle`
 - (rencana) `@chalidade/react-hooks`: `useIntersectionObserver`, `useVirtualList`
 - Deep dive: [Browser Rendering Pipeline](../deep-dives/browser-rendering-pipeline.md)

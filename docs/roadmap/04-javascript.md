@@ -84,5 +84,5 @@ bermuara ke salah satu dari ini.
 
 ## Toolkit terkait
 
-- [`@chalidade/utils`](../../packages/utils): `debounce`, `throttle` (baca source-nya sebagai latihan)
+- [`@chalidade/utils`](../toolkit/utils.md): `debounce`, `throttle` (baca source-nya sebagai latihan)
 - Deep dive: [Event Loop](../deep-dives/event-loop.md)

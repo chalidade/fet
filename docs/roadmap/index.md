@@ -65,7 +65,7 @@ lebih cepat, asalkan *Uji pemahaman*-nya bisa dijawab.
 
 ## Deep dives
 
-Topik yang lebih dalam dari roadmap ada di [`docs/deep-dives/`](../deep-dives/README.md).
+Topik yang lebih dalam dari roadmap ada di [`docs/deep-dives/`](../deep-dives/index.md).
 
 ## Setelah roadmap ini
 
