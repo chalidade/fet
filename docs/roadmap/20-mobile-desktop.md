@@ -52,4 +52,4 @@ ukuran aplikasi, akses ke API native, dan berapa banyak kode yang bisa dipakai u
 
 ## Toolkit terkait
 
-- (rencana) `@fet/tokens` dirancang agar bisa dipakai di web dan React Native
+- (rencana) `@chalidade/tokens` dirancang agar bisa dipakai di web dan React Native

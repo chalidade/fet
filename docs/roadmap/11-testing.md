@@ -31,7 +31,7 @@ implementasi) justru menghambat. Skill utamanya bukan sintaks framework test, ta
 
 ## Cara belajar
 
-1. Tulis test untuk `@fet/utils` lalu ubah implementasinya. Mana yang gagal karena perilaku berubah, dan mana yang hanya karena detail implementasi?
+1. Tulis test untuk `@chalidade/utils` lalu ubah implementasinya. Mana yang gagal karena perilaku berubah, dan mana yang hanya karena detail implementasi?
 2. Ganti semua query `getByTestId` di satu project dengan `getByRole`, lalu catat bug a11y yang ditemukan.
 3. Buat satu test E2E Playwright, jalankan 50 kali (`--repeat-each=50`), lalu perbaiki sampai tidak flaky.
 

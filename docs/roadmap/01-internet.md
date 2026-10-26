@@ -67,4 +67,4 @@ mengoptimasi di tempat yang salah.
 
 ## Toolkit terkait
 
-- (rencana) `@fet/http-cache-presets`: preset header cache untuk berbagai jenis aset
+- (rencana) `@chalidade/http-cache-presets`: preset header cache untuk berbagai jenis aset

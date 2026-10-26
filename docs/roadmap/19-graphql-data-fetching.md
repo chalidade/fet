@@ -58,4 +58,4 @@ daripada pilihan framework UI.
 
 ## Toolkit terkait
 
-- (rencana) `@fet/fetch`
+- (rencana) `@chalidade/fetch`

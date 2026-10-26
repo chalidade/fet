@@ -71,5 +71,5 @@ Svelte, Solid, dan Qwik dipelajari sebagai pembanding.
 
 ## Toolkit terkait
 
-- (rencana) `@fet/react-hooks`
-- (rencana) `@fet/ui`: headless + styled components
+- (rencana) `@chalidade/react-hooks`
+- (rencana) `@chalidade/ui`: headless + styled components

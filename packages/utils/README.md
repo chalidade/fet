@@ -1,4 +1,4 @@
-# @fet/utils
+# @chalidade/utils
 
 Utilitas front-end kecil tanpa dependensi.
 
@@ -10,7 +10,7 @@ Utilitas front-end kecil tanpa dependensi.
 | `clamp(v, min, max)` | Batasi angka ke rentang | — |
 
 ```ts
-import { debounce, cx } from "@fet/utils";
+import { debounce, cx } from "@chalidade/utils";
 
 const onSearch = debounce((q: string) => fetchResults(q), 300);
 const className = cx("btn", { "btn--active": active });

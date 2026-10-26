@@ -21,7 +21,7 @@ fet/
 │   ├── templates/      # template untuk menulis topik baru
 │   └── how-to-learn.md # metode belajar yang dipakai di seluruh repo
 ├── packages/           # toolkit yang bisa di-install (npm)
-│   └── utils/          # @fet/utils: debounce, throttle, cx, clamp
+│   └── utils/          # @chalidade/utils: debounce, throttle, cx, clamp
 └── apps/               # (rencana) situs dokumentasi & playground komponen
 ```
 
@@ -36,13 +36,12 @@ fet/
 
 | Package | Isi | Status |
 | --- | --- | --- |
-| [`@fet/utils`](packages/utils) | `debounce`, `throttle`, `cx`, `clamp` | ✅ siap, belum dipublish |
-| `@fet/tokens` | Design tokens (warna, spacing, tipografi) sebagai CSS variables + TS | 🗓️ rencana |
-| `@fet/react-hooks` | `useDebounce`, `useMediaQuery`, `useIntersectionObserver`, … | 🗓️ rencana |
-| `@fet/ui` | Komponen aksesibel (Button, Dialog, Tabs, Combobox, …) | 🗓️ rencana |
+| [`@chalidade/utils`](packages/utils) | `debounce`, `throttle`, `cx`, `clamp` | ✅ siap, belum dipublish |
+| `@chalidade/tokens` | Design tokens (warna, spacing, tipografi) sebagai CSS variables + TS | 🗓️ rencana |
+| `@chalidade/react-hooks` | `useDebounce`, `useMediaQuery`, `useIntersectionObserver`, … | 🗓️ rencana |
+| `@chalidade/ui` | Komponen aksesibel (Button, Dialog, Tabs, Combobox, …) | 🗓️ rencana |
 
-> Nama scope `@fet` masih sementara. Sebelum publish ke npm, scope-nya perlu dipastikan
-> tersedia (atau diganti, misalnya `@chalidade/*`).
+> Semua package dipublish di bawah scope npm `@chalidade/*`. Belum ada yang dipublish ke npm.
 
 ## Pengembangan
 

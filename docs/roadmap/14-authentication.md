@@ -56,4 +56,4 @@ token disimpan, bagaimana sesi diperbarui, dan apa yang terjadi saat sesi habis.
 
 ## Toolkit terkait
 
-- (rencana) `@fet/fetch`: fetch wrapper dengan retry, timeout, dan refresh token
+- (rencana) `@chalidade/fetch`: fetch wrapper dengan retry, timeout, dan refresh token

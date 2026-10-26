@@ -58,4 +58,4 @@ sensor. Banyak fitur yang biasanya dibuat dengan library berat sebenarnya sudah 
 
 ## Toolkit terkait
 
-- (rencana) `@fet/react-hooks`: `useMediaQuery`, `useLocalStorage`, `useOnline`, `useIntersectionObserver`
+- (rencana) `@chalidade/react-hooks`: `useMediaQuery`, `useLocalStorage`, `useOnline`, `useIntersectionObserver`

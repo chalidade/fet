@@ -54,4 +54,4 @@ diselesaikan framework.
 
 ## Toolkit terkait
 
-- (rencana) `@fet/elements`: versi Web Components dari komponen `@fet/ui`
+- (rencana) `@chalidade/elements`: versi Web Components dari komponen `@chalidade/ui`

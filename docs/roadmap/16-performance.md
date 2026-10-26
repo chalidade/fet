@@ -62,6 +62,6 @@ hanyalah tebakan.
 
 ## Toolkit terkait
 
-- [`@fet/utils`](../../packages/utils): `debounce`, `throttle`
-- (rencana) `@fet/react-hooks`: `useIntersectionObserver`, `useVirtualList`
+- [`@chalidade/utils`](../../packages/utils): `debounce`, `throttle`
+- (rencana) `@chalidade/react-hooks`: `useIntersectionObserver`, `useVirtualList`
 - Deep dive: [Browser Rendering Pipeline](../deep-dives/browser-rendering-pipeline.md)

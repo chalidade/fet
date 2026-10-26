@@ -54,4 +54,4 @@ bundler, compiler, dan codemod.
 
 ## Toolkit terkait
 
-- (rencana) `@fet/eslint-config`: konfigurasi bersama untuk project yang memakai toolkit ini
+- (rencana) `@chalidade/eslint-config`: konfigurasi bersama untuk project yang memakai toolkit ini

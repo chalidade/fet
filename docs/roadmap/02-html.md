@@ -70,4 +70,4 @@ default browser (fokus, form, keyboard) bisa didapat tanpa JavaScript.
 
 ## Toolkit terkait
 
-- (rencana) `@fet/ui`: semua komponen mengikuti pola APG
+- (rencana) `@chalidade/ui`: semua komponen mengikuti pola APG

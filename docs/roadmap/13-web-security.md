@@ -58,4 +58,4 @@ penuh ke halaman. Banyak kebocoran data bermula dari keputusan front-end yang te
 
 ## Toolkit terkait
 
-- (rencana) `@fet/security-headers`: preset header untuk Next.js / Vite / Express
+- (rencana) `@chalidade/security-headers`: preset header untuk Next.js / Vite / Express

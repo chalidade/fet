@@ -57,5 +57,5 @@ cara mengendalikan scope, specificity, dan konsistensi visual saat tim dan codeb
 
 ## Toolkit terkait
 
-- [`@fet/utils`](../../packages/utils): `cx`
-- (rencana) `@fet/tokens`
+- [`@chalidade/utils`](../../packages/utils): `cx`
+- (rencana) `@chalidade/tokens`
