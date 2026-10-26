@@ -7,6 +7,8 @@ usually just use, with experiments you can run yourself.
 | --- | --- | --- |
 | [Event Loop](event-loop.md) | ✅ | 04, 16 |
 | [Browser Rendering Pipeline](browser-rendering-pipeline.md) | ✅ | 03, 16 |
+| [CSS Cascade & Specificity](css-cascade.md) | ✅ | 03, 08, 15 |
+| [HTTP Caching](http-caching.md) | ✅ | 01, 09, 16, 17 |
 | How V8 works: parsing, Ignition, TurboFan, hidden classes | 🗓️ | 04 |
 | The accessibility tree & how screen readers work | 🗓️ | 02 |
 | React Fiber from the source code | 🗓️ | 07 |
