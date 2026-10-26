@@ -10,14 +10,14 @@ hero:
     alt: fet
   actions:
     - theme: brand
-      text: What is fet?
-      link: /en/guide/
+      text: Start learning
+      link: /en/learning-room
     - theme: alt
       text: See the roadmap
       link: /en/roadmap/
     - theme: alt
-      text: Start learning
-      link: /en/learning-room
+      text: What is fet?
+      link: /en/guide/
 
 features:
   - icon: 🗺️

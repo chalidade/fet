@@ -10,14 +10,14 @@ hero:
     alt: fet
   actions:
     - theme: brand
-      text: Apa itu fet?
-      link: /guide/
+      text: Mulai belajar
+      link: /ruang-belajar
     - theme: alt
       text: Lihat roadmap
       link: /roadmap/
     - theme: alt
-      text: Mulai belajar
-      link: /ruang-belajar
+      text: Apa itu fet?
+      link: /guide/
 
 features:
   - icon: 🗺️

@@ -71,10 +71,7 @@ function nav(lang: "id" | "en"): DefaultTheme.NavItem[] {
   const p = lang === "id" ? "" : "/en";
   const t = (id: string, en: string) => (lang === "id" ? id : en);
   return [
-    { text: t("Panduan", "Guide"), link: `${p}/guide/`, activeMatch: `^${p}/(guide|how-to-learn|notes)` },
     { text: "Roadmap", link: `${p}/roadmap/`, activeMatch: `^${p}/roadmap/` },
-    { text: "Deep dives", link: `${p}/deep-dives/`, activeMatch: `^${p}/deep-dives/` },
-    { text: "Toolkit", link: `${p}/toolkit/`, activeMatch: `^${p}/toolkit/` },
     {
       text: t("Ruang Belajar", "Learning Room"),
       link: lang === "id" ? "/ruang-belajar" : "/en/learning-room",
@@ -84,6 +81,16 @@ function nav(lang: "id" | "en"): DefaultTheme.NavItem[] {
       text: t("Komunitas", "Community"),
       link: lang === "id" ? "/komunitas/" : "/en/community/",
       activeMatch: lang === "id" ? "^/(komunitas|profil)" : "^/en/(community|profile)",
+    },
+    {
+      text: t("Dokumentasi", "Docs"),
+      activeMatch: `^${p}/(guide|how-to-learn|notes|deep-dives|toolkit)`,
+      items: [
+        { text: t("Apa itu fet?", "What is fet?"), link: `${p}/guide/` },
+        { text: t("Metode belajar", "How to learn"), link: `${p}/how-to-learn` },
+        { text: "Deep dives", link: `${p}/deep-dives/` },
+        { text: "Toolkit", link: `${p}/toolkit/` },
+      ],
     },
   ];
 }
@@ -98,7 +105,7 @@ export default withMermaid(
     srcExclude: ["templates/**"],
     head: [
       ["link", { rel: "icon", type: "image/svg+xml", href: "/fet/logo.svg" }],
-      ["meta", { name: "theme-color", content: "#5b6cff" }],
+      ["meta", { name: "theme-color", content: "#4f46e5" }],
     ],
 
     locales: {

@@ -1,11 +1,9 @@
 ---
-sidebar: false
+layout: page
 title: Postingan
-aside: false
-editLink: false
-lastUpdated: false
-prev: false
-next: false
+sidebar: false
 ---
 
+<div class="fet-page fet-page--narrow">
 <ClientOnly><PostDetail /></ClientOnly>
+</div>

@@ -1,12 +1,9 @@
 ---
-sidebar: false
+layout: page
 title: Community
+sidebar: false
 ---
 
-# Community
-
-Learning results from fet learners: notes, exercise code, and video explanations. Learn together and
-give each other feedback. Want to share? Open the [Learning Room](/en/learning-room), work through a
-stage, then publish from the **Share** tab.
-
+<div class="fet-page fet-page--narrow">
 <ClientOnly><CommunityFeed /></ClientOnly>
+</div>

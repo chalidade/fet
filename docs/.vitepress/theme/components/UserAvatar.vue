@@ -15,7 +15,7 @@ const initial = computed(() => (props.name.trim()[0] ?? "?").toUpperCase());
     :height="size ?? 32"
     referrerpolicy="no-referrer"
   />
-  <span v-else class="fet-avatar fet-avatar--fallback" :style="{ width: `${size ?? 32}px`, height: `${size ?? 32}px` }" aria-hidden="true">
+  <span v-else class="fet-avatar fet-avatar--fallback" :style="{ width: `${size ?? 32}px`, height: `${size ?? 32}px`, fontSize: `${Math.round((size ?? 32) * 0.42)}px` }" aria-hidden="true">
     {{ initial }}
   </span>
 </template>
