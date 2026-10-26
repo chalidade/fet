@@ -1,6 +1,7 @@
 import { defineConfig, type DefaultTheme } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
 import { stages } from "./stages";
+import { taskList } from "./taskList";
 
 const REPO = "https://github.com/chalidade/fet";
 
@@ -103,6 +104,9 @@ export default withMermaid(
     cleanUrls: true,
     lastUpdated: true,
     srcExclude: ["templates/**"],
+    markdown: {
+      config: (md) => md.use(taskList),
+    },
     head: [
       ["link", { rel: "icon", type: "image/svg+xml", href: "/fet/logo.svg" }],
       ["meta", { name: "theme-color", content: "#4f46e5" }],

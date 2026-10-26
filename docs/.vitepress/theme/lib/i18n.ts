@@ -33,6 +33,7 @@ const id = {
     continue: "Lanjutkan belajar",
     community: "Lihat hasil komunitas",
     pitch: "Praktikkan tahap ini di Ruang Belajar",
+    concepts: (n: number, total: number) => `${n}/${total} konsep di peta konsep sudah kamu kuasai`,
     pitchSub: "Tulis kode, catat temuanmu, lalu rekam video penjelasan.",
   },
   room: {
@@ -173,6 +174,7 @@ const en: Strings = {
     continue: "Continue learning",
     community: "See community work",
     pitch: "Practice this stage in the Learning Room",
+    concepts: (n: number, total: number) => `${n}/${total} concepts in the concept map mastered`,
     pitchSub: "Write code, note your findings, then record a video explanation.",
   },
   room: {
