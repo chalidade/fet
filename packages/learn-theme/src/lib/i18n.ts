@@ -1,4 +1,5 @@
 import type { Lang } from "./routes";
+import { config } from "./config";
 
 const id = {
   common: {
@@ -87,7 +88,9 @@ const id = {
     inDrive: "Ada di Drive",
     useInPost: "Pakai di postingan",
     driveOff: "Penyimpanan ke Google Drive belum diaktifkan. Unduh videonya, upload ke Drive/YouTube, lalu tempel link-nya saat berbagi.",
-    drivePrivacy: "fet hanya bisa mengakses file yang dibuatnya sendiri di Drive-mu (izin drive.file).",
+    get drivePrivacy() {
+      return `${config.siteName} hanya bisa mengakses file yang dibuatnya sendiri di Drive-mu (izin drive.file).`;
+    },
     connectDrive: "Hubungkan Google Drive",
     preview: "Pratinjau muncul di sini saat merekam",
   },
@@ -107,7 +110,9 @@ const id = {
   },
   community: {
     title: "Komunitas",
-    intro: "Hasil belajar dari para pembelajar fet: catatan, kode, dan video penjelasan. Belajar bareng, saling memberi masukan.",
+    get intro() {
+      return `Hasil belajar dari para pembelajar ${config.siteName}: catatan, kode, dan video penjelasan. Belajar bareng, saling memberi masukan.`;
+    },
     empty: "Belum ada postingan. Jadilah yang pertama berbagi!",
     shareCta: "Bagikan hasil belajarmu",
     comments: "Komentar",
@@ -139,8 +144,12 @@ const id = {
   },
   evidence: {
     title: "Bukti Belajar",
-    kicker: "Portofolio belajar front-end",
-    lead: "Rangkuman tahap roadmap, konsep yang dikuasai, dan hasil kerja yang dipublikasikan di fet.",
+    get kicker() {
+      return `Portofolio belajar ${config.subject.id}`;
+    },
+    get lead() {
+      return `Rangkuman tahap roadmap, konsep yang dikuasai, dan hasil kerja yang dipublikasikan di ${config.siteName}.`;
+    },
     print: "Cetak / simpan PDF",
     copyLink: "Salin tautan",
     copied: "Tautan disalin",
@@ -159,7 +168,7 @@ const id = {
     code: "Kode",
     empty: "Belum ada tahap yang dikerjakan.",
     localMode: "Mode lokal: data diambil dari browser ini dan belum terverifikasi. Masuk agar bukti belajar punya tautan publik.",
-    generated: (date: string) => `Dibuat dari data fet pada ${date}.`,
+    generated: (date: string) => `Dibuat dari data ${config.siteName} pada ${date}.`,
     verify: "Verifikasi versi terbaru di",
     open: "Bukti belajar",
   },
@@ -254,7 +263,9 @@ const en: Strings = {
     inDrive: "In Drive",
     useInPost: "Use in post",
     driveOff: "Saving to Google Drive isn't enabled yet. Download the video, upload it to Drive/YouTube, then paste the link when you share.",
-    drivePrivacy: "fet can only access files it created in your Drive (the drive.file permission).",
+    get drivePrivacy() {
+      return `${config.siteName} can only access files it created in your Drive (the drive.file permission).`;
+    },
     connectDrive: "Connect Google Drive",
     preview: "The preview appears here while recording",
   },
@@ -274,7 +285,9 @@ const en: Strings = {
   },
   community: {
     title: "Community",
-    intro: "Learning results from fet learners: notes, code, and video explanations. Learn together and give each other feedback.",
+    get intro() {
+      return `Learning results from ${config.siteName} learners: notes, code, and video explanations. Learn together and give each other feedback.`;
+    },
     empty: "No posts yet. Be the first to share!",
     shareCta: "Share your learning",
     comments: "Comments",
@@ -306,8 +319,13 @@ const en: Strings = {
   },
   evidence: {
     title: "Learning Evidence",
-    kicker: "Front-end learning portfolio",
-    lead: "A summary of roadmap stages, concepts mastered, and work published on fet.",
+    get kicker() {
+      const subject = config.subject.en;
+      return `${subject.charAt(0).toUpperCase()}${subject.slice(1)} learning portfolio`;
+    },
+    get lead() {
+      return `A summary of roadmap stages, concepts mastered, and work published on ${config.siteName}.`;
+    },
     print: "Print / save PDF",
     copyLink: "Copy link",
     copied: "Link copied",
@@ -326,7 +344,7 @@ const en: Strings = {
     code: "Code",
     empty: "No stages worked on yet.",
     localMode: "Local mode: data comes from this browser and is unverified. Sign in to get a public evidence link.",
-    generated: (date: string) => `Generated from fet data on ${date}.`,
+    generated: (date: string) => `Generated from ${config.siteName} data on ${date}.`,
     verify: "Verify the latest version at",
     open: "Learning evidence",
   },

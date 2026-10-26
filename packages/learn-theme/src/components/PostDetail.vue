@@ -4,7 +4,7 @@ import UserAvatar from "./UserAvatar.vue";
 import CodePlayground from "./CodePlayground.vue";
 import DropMenu from "./DropMenu.vue";
 import Icon from "./Icon.vue";
-import { findStage } from "../../stages";
+import { findStage, stageNumber } from "../lib/config";
 import { isConfigured, session, signIn } from "../lib/supabase";
 import * as api from "../lib/api";
 import { embedUrl, renderMarkdown } from "../lib/markdown";
@@ -114,7 +114,7 @@ async function removePost(e: MouseEvent) {
 
     <template v-else-if="post">
       <header class="fet-post__head">
-        <div v-if="stage"><a class="fet-chip" :href="href(paths(lang).stage(stage.slug))">{{ stage.slug.slice(0, 2) }} · {{ stage.title }}</a></div>
+        <div v-if="stage"><a class="fet-chip" :href="href(paths(lang).stage(stage.slug))">{{ stageNumber(stage.slug) }} · {{ stage.title }}</a></div>
         <h1>{{ post.title }}</h1>
         <div class="fet-post__byline">
           <a :href="href(paths(lang).profile(post.username))" class="fet-author">

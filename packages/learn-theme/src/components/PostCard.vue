@@ -3,7 +3,7 @@ import { computed } from "vue";
 import UserAvatar from "./UserAvatar.vue";
 import Icon from "./Icon.vue";
 import type { FeedPost } from "../lib/api";
-import { findStage } from "../../stages";
+import { findStage, stageNumber } from "../lib/config";
 import { formatDate } from "../lib/i18n";
 import { renderMarkdown } from "../lib/markdown";
 import { href, paths } from "../lib/routes";
@@ -34,7 +34,7 @@ const stage = computed(() => findStage(props.post.stage));
     <a :href="href(paths(lang).post(post.id))" class="fet-post-card__title">{{ post.title }}</a>
     <p v-if="excerpt" class="fet-post-card__excerpt">{{ excerpt }}</p>
     <div class="fet-post-card__foot">
-      <a v-if="stage" class="fet-chip" :href="href(paths(lang).community(stage.slug))">{{ stage.slug.slice(0, 2) }} · {{ stage.title }}</a>
+      <a v-if="stage" class="fet-chip" :href="href(paths(lang).community(stage.slug))">{{ stageNumber(stage.slug) }} · {{ stage.title }}</a>
       <span v-if="post.video_url" class="fet-meta-item" :title="s.room.tabs.video"><Icon name="video" :size="14" /></span>
       <span v-if="post.code" class="fet-meta-item" :title="s.room.tabs.code"><Icon name="code" :size="14" /></span>
       <span class="spacer" />

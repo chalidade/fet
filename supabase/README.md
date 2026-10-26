@@ -21,6 +21,8 @@ dirancang untuk dipakai di browser. **Jangan pernah menaruh `service_role` / sec
    (menyimpan centang peta konsep ke akun). Sebelum dijalankan, centang tetap tersimpan di browser.
    Lalu [`20261028000000_public_checklist.sql`](migrations/20261028000000_public_checklist.sql)
    (menampilkan konsep yang dicentang di halaman Bukti Belajar untuk orang lain; catatan dan kode tetap privat).
+   Lalu [`20261029000000_stage_slug_prefix.sql`](migrations/20261029000000_stage_slug_prefix.sql)
+   (mengizinkan slug ber-prefix seperti `be-01-http` untuk situs belajar lain yang memakai Supabase ini).
 
 Alternatif dengan CLI: `supabase link --project-ref bqyvtheczekghopzzgyo && supabase db push`.
 

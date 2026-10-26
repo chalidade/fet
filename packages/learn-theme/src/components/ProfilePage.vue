@@ -3,13 +3,14 @@ import { computed, onMounted, reactive, ref, watch } from "vue";
 import UserAvatar from "./UserAvatar.vue";
 import PostCard from "./PostCard.vue";
 import Icon from "./Icon.vue";
-import { stages } from "../../stages";
+import { config, stageNumber } from "../lib/config";
 import { isConfigured, refreshProfile, session, signIn, type Profile } from "../lib/supabase";
 import * as api from "../lib/api";
 import type { Status } from "../lib/storage";
 import { formatDate } from "../lib/i18n";
 import { href, paths, query } from "../lib/routes";
 import { useLang } from "../lib/useLang";
+const stages = config.stages;
 
 const { lang, s } = useLang();
 const profile = ref<Profile | null>(null);
@@ -150,7 +151,7 @@ async function saveProfile() {
           <a class="fet-stage-item" :data-status="statuses[st.slug] ?? 'not-started'" :href="href(isMe ? paths(lang).room(st.slug) : paths(lang).stage(st.slug))">
             <span class="fet-stage-item__num">
               <Icon v-if="statuses[st.slug] === 'done'" name="check" :size="15" />
-              <template v-else>{{ st.slug.slice(0, 2) }}</template>
+              <template v-else>{{ stageNumber(st.slug) }}</template>
             </span>
             <span class="fet-stage-item__title">{{ st.title }}</span>
             <span class="fet-stage-item__status">{{ s.status[statuses[st.slug] ?? "not-started"] }}</span>

@@ -6,13 +6,14 @@ import VideoRecorder from "./VideoRecorder.vue";
 import DropMenu from "./DropMenu.vue";
 import Icon from "./Icon.vue";
 import type { IconName } from "../lib/icons";
-import { stages, findStage } from "../../stages";
+import { config, findStage, stageNumber } from "../lib/config";
 import { isConfigured, session, signIn } from "../lib/supabase";
 import * as api from "../lib/api";
 import * as drive from "../lib/drive";
 import { loadAllStatuses, loadDraft, saveDraft, starter, type StageDraft, type Status } from "../lib/storage";
 import { href, paths, query } from "../lib/routes";
 import { useLang } from "../lib/useLang";
+const stages = config.stages;
 
 const { lang, s } = useLang();
 
@@ -173,7 +174,7 @@ async function downloadZip() {
   const blob = new Blob([zipSync(entries)], { type: "application/zip" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = `fet-${stage.value.slug}.zip`;
+  a.download = `${config.siteName}-${stage.value.slug}.zip`;
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }
@@ -283,7 +284,7 @@ const nextStage = computed(
           <button class="fet-stage-item" :data-status="statuses[st.slug] ?? 'not-started'" @click="selectStage(st.slug)">
             <span class="fet-stage-item__num">
               <Icon v-if="statuses[st.slug] === 'done'" name="check" :size="15" />
-              <template v-else>{{ st.slug.slice(0, 2) }}</template>
+              <template v-else>{{ stageNumber(st.slug) }}</template>
             </span>
             <span class="fet-stage-item__title">{{ st.title }}</span>
             <span class="fet-stage-item__status">{{ s.status[statuses[st.slug] ?? "not-started"] }}</span>
@@ -301,7 +302,7 @@ const nextStage = computed(
           </button>
         </div>
         <div class="fet-ws-title">
-          <h1><span class="num">{{ stage.slug.slice(0, 2) }}</span> {{ stage.title }}</h1>
+          <h1><span class="num">{{ stageNumber(stage.slug) }}</span> {{ stage.title }}</h1>
           <div class="fet-ws-actions">
             <a class="fet-icon-btn" :href="href(paths(lang).stage(stage.slug))" target="_blank" :title="s.room.material">
               <Icon name="book" /> <span class="label">{{ s.room.material }}</span>
