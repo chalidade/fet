@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, ref, watch } from "vue";
 import { useRoute } from "vitepress";
-import { findStage } from "../../stages";
+import { findStage } from "../lib/config";
 import { isConfigured, session } from "../lib/supabase";
 import { getChecklist, getStatuses, saveChecklist as saveChecklistCloud, setStatus, stageStats } from "../lib/api";
 import { loadChecklist, loadDraft, saveChecklist, saveDraft, starter, type Status } from "../lib/storage";

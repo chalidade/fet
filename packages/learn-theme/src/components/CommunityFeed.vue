@@ -2,11 +2,12 @@
 import { onMounted, ref, watch } from "vue";
 import PostCard from "./PostCard.vue";
 import Icon from "./Icon.vue";
-import { stages } from "../../stages";
+import { config, stageNumber } from "../lib/config";
 import { isConfigured } from "../lib/supabase";
 import { listPosts, PAGE_SIZE, type FeedPost } from "../lib/api";
 import { href, paths, query } from "../lib/routes";
 import { useLang } from "../lib/useLang";
+const stages = config.stages;
 
 const { lang, s } = useLang();
 const stage = ref("");
@@ -63,7 +64,7 @@ watch(stage, (value) => {
         <label class="sr-only" for="fet-stage-filter">{{ s.common.stage }}</label>
         <select id="fet-stage-filter" v-model="stage" class="fet-select">
           <option value="">{{ s.common.allStages }}</option>
-          <option v-for="st in stages" :key="st.slug" :value="st.slug">{{ st.slug.slice(0, 2) }} · {{ st.title }}</option>
+          <option v-for="st in stages" :key="st.slug" :value="st.slug">{{ stageNumber(st.slug) }} · {{ st.title }}</option>
         </select>
       </div>
 

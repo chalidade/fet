@@ -1,25 +1,17 @@
-import type { Theme } from "vitepress";
-import DefaultTheme from "vitepress/theme";
-import Layout from "./Layout.vue";
-import LearningRoom from "./components/LearningRoom.vue";
-import CommunityFeed from "./components/CommunityFeed.vue";
-import PostDetail from "./components/PostDetail.vue";
-import ProfilePage from "./components/ProfilePage.vue";
+import { createLearnTheme } from "@chalidade/learn-theme";
 import HomePage from "./components/HomePage.vue";
-import EvidencePage from "./components/EvidencePage.vue";
-import { initSession } from "./lib/supabase";
-import "./style.css";
+import { phases, stages } from "../stages";
+import { data as concepts } from "../concepts.data";
 
-export default {
-  extends: DefaultTheme,
-  Layout,
-  enhanceApp({ app }) {
-    app.component("LearningRoom", LearningRoom);
-    app.component("CommunityFeed", CommunityFeed);
-    app.component("PostDetail", PostDetail);
-    app.component("ProfilePage", ProfilePage);
-    app.component("HomePage", HomePage);
-    app.component("EvidencePage", EvidencePage);
-    if (typeof window !== "undefined") initSession();
+export default createLearnTheme(
+  {
+    siteName: "fet",
+    subject: { id: "front-end", en: "front-end" },
+    stages,
+    phases,
+    concepts,
   },
-} satisfies Theme;
+  ({ app }) => {
+    app.component("HomePage", HomePage);
+  },
+);

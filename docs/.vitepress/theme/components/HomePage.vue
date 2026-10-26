@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import Icon from "./Icon.vue";
+import { Icon, href, paths, useLang, type IconName } from "@chalidade/learn-theme";
 import { phases, stages } from "../../stages";
-import { href, paths } from "../lib/routes";
-import { useLang } from "../lib/useLang";
-import type { IconName } from "../lib/icons";
 
 const { lang } = useLang();
 

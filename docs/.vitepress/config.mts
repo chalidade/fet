@@ -1,7 +1,7 @@
 import { defineConfig, type DefaultTheme } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
 import { phases, stages } from "./stages";
-import { taskList } from "./taskList";
+import { taskList } from "@chalidade/learn-theme/markdown";
 
 const REPO = "https://github.com/chalidade/fet";
 

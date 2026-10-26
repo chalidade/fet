@@ -2,8 +2,7 @@
 import { computed, onMounted, ref, watch } from "vue";
 import Icon from "./Icon.vue";
 import UserAvatar from "./UserAvatar.vue";
-import { phases, stages } from "../../stages";
-import { data as concepts } from "../../concepts.data";
+import { config, stageNumber } from "../lib/config";
 import { isConfigured, session, signIn, type Profile } from "../lib/supabase";
 import * as api from "../lib/api";
 import { loadAllStatuses, loadChecklist, loadDraft, type Status } from "../lib/storage";
@@ -11,6 +10,7 @@ import { formatDate } from "../lib/i18n";
 import { renderInline, renderMarkdown } from "../lib/markdown";
 import { href, paths, query } from "../lib/routes";
 import { useLang } from "../lib/useLang";
+const { stages, phases, concepts } = config;
 
 interface StageEvidence {
   status: Status;
@@ -237,7 +237,7 @@ function hasCode(code: api.Code | null): code is api.Code {
         <h2>{{ g.title }}</h2>
         <article v-for="st in g.items" :key="st.slug" class="fet-card fet-evidence__stage">
           <header class="fet-evidence__stage-head">
-            <span class="fet-evidence__num">{{ st.slug.slice(0, 2) }}</span>
+            <span class="fet-evidence__num">{{ stageNumber(st.slug) }}</span>
             <h3><a :href="href(paths(lang).stage(st.slug))">{{ st.title }}</a></h3>
             <span class="fet-badge" :data-status="st.e.status">{{ s.status[st.e.status] }}</span>
           </header>
