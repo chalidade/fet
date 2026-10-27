@@ -55,3 +55,4 @@ frameworks solve.
 ## Related toolkit
 
 - (planned) `@chalidade/elements`: Web Component versions of the `@chalidade/ui` components
+- Deep dive: [The accessibility tree](../deep-dives/accessibility-tree.md) (roles and names for custom elements)

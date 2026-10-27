@@ -11,7 +11,7 @@ biasanya hanya dipakai, dengan eksperimen yang bisa dijalankan sendiri.
 | [HTTP Caching](http-caching.md) | ✅ | 01, 09, 16, 17 |
 | [Efisiensi di React](react-efficiency.md): debounce, memo, transition, virtualisasi | ✅ | 04, 07, 16 |
 | [Cara kerja V8](v8.md): parsing, Ignition, TurboFan, hidden classes | ✅ | 04, 16 |
-| Accessibility tree & cara screen reader bekerja | 🗓️ | 02 |
+| [Accessibility tree & cara screen reader bekerja](accessibility-tree.md) | ✅ | 02, 07, 15 |
 | React Fiber dari source code | 🗓️ | 07 |
 | Signals: dari Knockout ke TC39 proposal | 🗓️ | 07 |
 | Module bundler dari nol | 🗓️ | 09 |

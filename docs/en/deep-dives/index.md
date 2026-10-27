@@ -11,7 +11,7 @@ usually just use, with experiments you can run yourself.
 | [HTTP Caching](http-caching.md) | ✅ | 01, 09, 16, 17 |
 | [Efficiency in React](react-efficiency.md): debounce, memo, transitions, virtualization | ✅ | 04, 07, 16 |
 | [How V8 works](v8.md): parsing, Ignition, TurboFan, hidden classes | ✅ | 04, 16 |
-| The accessibility tree & how screen readers work | 🗓️ | 02 |
+| [The accessibility tree & how screen readers work](accessibility-tree.md) | ✅ | 02, 07, 15 |
 | React Fiber from the source code | 🗓️ | 07 |
 | Signals: from Knockout to the TC39 proposal | 🗓️ | 07 |
 | A module bundler from scratch | 🗓️ | 09 |

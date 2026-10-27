@@ -55,3 +55,4 @@ diselesaikan framework.
 ## Toolkit terkait
 
 - (rencana) `@chalidade/elements`: versi Web Components dari komponen `@chalidade/ui`
+- Deep dive: [Accessibility tree](../deep-dives/accessibility-tree.md) (role dan nama untuk custom element)
