@@ -58,4 +58,4 @@ at which level**.
 
 ## Related toolkit
 
-- [`packages/utils/src/index.test.ts`](https://github.com/chalidade/fet/blob/main/packages/utils/src/index.test.ts): an example of tests with fake timers
+- [`packages/utils/src/index.test.ts`](https://github.com/chalidade/front-end-training/blob/main/packages/utils/src/index.test.ts): an example of tests with fake timers

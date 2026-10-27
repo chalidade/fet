@@ -30,15 +30,15 @@ Alternatif dengan CLI: `supabase link --project-ref bqyvtheczekghopzzgyo && supa
 
 Supabase → **Authentication → URL Configuration**:
 
-- **Site URL**: `https://chalidade.github.io/fet/`
+- **Site URL**: `https://chalidade.github.io/front-end-training/`
 - **Redirect URLs** (tambahkan keduanya):
-  - `https://chalidade.github.io/fet/**`
+  - `https://chalidade.github.io/front-end-training/**`
   - `http://localhost:5173/**` (untuk `pnpm docs:dev`)
 
 ## 3. Login dengan GitHub
 
 1. GitHub → **Settings → Developer settings → OAuth Apps → New OAuth App**.
-   - Homepage URL: `https://chalidade.github.io/fet/`
+   - Homepage URL: `https://chalidade.github.io/front-end-training/`
    - Authorization callback URL: `https://bqyvtheczekghopzzgyo.supabase.co/auth/v1/callback`
 2. Salin **Client ID**, buat **Client secret**.
 3. Supabase → **Authentication → Sign In / Providers → GitHub** → aktifkan, tempel Client ID dan secret.
@@ -71,5 +71,5 @@ Drive/YouTube secara manual saat berbagi.
 
 ```bash
 pnpm install
-pnpm docs:dev   # http://localhost:5173/fet/
+pnpm docs:dev   # http://localhost:5173/front-end-training/
 ```

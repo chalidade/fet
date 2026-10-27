@@ -12,4 +12,4 @@ const query = useDebouncedValue(input, 300);
 const isMobile = useMediaQuery("(max-width: 640px)");
 ```
 
-Dokumentasi lengkap: https://chalidade.github.io/fet/toolkit/react-hooks
+Dokumentasi lengkap: https://chalidade.github.io/front-end-training/toolkit/react-hooks

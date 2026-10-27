@@ -25,7 +25,7 @@ Toolkit adalah package npm kecil yang lahir dari materi roadmap. Setiap package 
 ## Mengembangkan secara lokal
 
 ```bash
-git clone https://github.com/chalidade/fet
+git clone https://github.com/chalidade/front-end-training
 cd fet
 pnpm install
 pnpm test        # jalankan semua test

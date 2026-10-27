@@ -1,6 +1,6 @@
 # @chalidade/learn-theme
 
-Tema VitePress untuk situs belajar bergaya [fet](https://chalidade.github.io/fet/): Ruang Belajar
+Tema VitePress untuk situs belajar bergaya [fet](https://chalidade.github.io/front-end-training/): Ruang Belajar
 (editor kode + preview, catatan, rekam video ke Google Drive), komunitas, profil, halaman Bukti
 Belajar, dan checklist konsep di setiap halaman tahap roadmap. Datanya disimpan di Supabase, jadi
 beberapa situs (misalnya roadmap front-end dan back-end) bisa memakai akun dan komunitas yang sama.

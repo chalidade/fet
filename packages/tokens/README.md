@@ -19,4 +19,4 @@ const card = { padding: space[4], background: themeVar("surface") };
 }
 ```
 
-Dokumentasi lengkap: https://chalidade.github.io/fet/toolkit/tokens
+Dokumentasi lengkap: https://chalidade.github.io/front-end-training/toolkit/tokens

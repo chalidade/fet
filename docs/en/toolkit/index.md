@@ -25,7 +25,7 @@ The toolkits are small npm packages that grow out of the roadmap material. Each 
 ## Developing locally
 
 ```bash
-git clone https://github.com/chalidade/fet
+git clone https://github.com/chalidade/front-end-training
 cd fet
 pnpm install
 pnpm test        # run all tests

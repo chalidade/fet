@@ -10,7 +10,7 @@ npm install @chalidade/utils
 
 ::: warning Not published yet
 This package isn't on npm yet. For now, copy the source from
-[GitHub](https://github.com/chalidade/fet/tree/main/packages/utils/src).
+[GitHub](https://github.com/chalidade/front-end-training/tree/main/packages/utils/src).
 :::
 
 ## API
@@ -69,6 +69,6 @@ clamp(120, 0, 100); // 100
 
 Suggested exercise:
 
-1. Rewrite `debounce` without looking at [its source](https://github.com/chalidade/fet/blob/main/packages/utils/src/debounce.ts).
+1. Rewrite `debounce` without looking at [its source](https://github.com/chalidade/front-end-training/blob/main/packages/utils/src/debounce.ts).
 2. Run `pnpm test` to check your implementation.
 3. Compare it with `lodash.debounce` (the `leading` and `maxWait` options) and record the differences in your [experiment notes](/en/notes/).

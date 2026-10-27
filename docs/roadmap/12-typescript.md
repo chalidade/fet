@@ -60,4 +60,4 @@ direpresentasikan, dan API library terasa "ajaib" bagi pemakainya.
 
 ## Toolkit terkait
 
-- Semua package di repo ini ditulis dengan TS strict, lihat [`tsconfig.base.json`](https://github.com/chalidade/fet/blob/main/tsconfig.base.json)
+- Semua package di repo ini ditulis dengan TS strict, lihat [`tsconfig.base.json`](https://github.com/chalidade/front-end-training/blob/main/tsconfig.base.json)

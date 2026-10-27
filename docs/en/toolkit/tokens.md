@@ -10,7 +10,7 @@ pnpm add @chalidade/tokens
 
 ::: warning Not published yet
 This package isn't on npm yet. For now, copy the source from
-[GitHub](https://github.com/chalidade/fet/tree/main/packages/tokens/src).
+[GitHub](https://github.com/chalidade/front-end-training/tree/main/packages/tokens/src).
 :::
 
 ## Why design tokens?

@@ -90,4 +90,4 @@ fet/
 ## Kontribusi
 
 Menemukan kesalahan atau ingin menambah materi? Klik **"Perbaiki halaman ini di GitHub"** di bawah
-setiap halaman, atau buka issue di [github.com/chalidade/fet](https://github.com/chalidade/fet).
+setiap halaman, atau buka issue di [github.com/chalidade/front-end-training](https://github.com/chalidade/front-end-training).

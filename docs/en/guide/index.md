@@ -90,4 +90,4 @@ fet/
 ## Contributing
 
 Found a mistake or want to add material? Click **"Edit this page on GitHub"** at the bottom of any
-page, or open an issue at [github.com/chalidade/fet](https://github.com/chalidade/fet).
+page, or open an issue at [github.com/chalidade/front-end-training](https://github.com/chalidade/front-end-training).

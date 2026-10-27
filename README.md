@@ -1,10 +1,10 @@
 # fet: Front-End Training
 
-📖 **Dokumentasi / Documentation: [chalidade.github.io/fet](https://chalidade.github.io/fet/)** (Bahasa Indonesia · [English](https://chalidade.github.io/fet/en/))
+📖 **Dokumentasi / Documentation: [chalidade.github.io/front-end-training](https://chalidade.github.io/front-end-training/)** (Bahasa Indonesia · [English](https://chalidade.github.io/front-end-training/en/))
 
-[![Video launch fet: belajar front-end sampai paham cara kerjanya](docs/public/fet-launch-poster.jpg)](https://chalidade.github.io/fet/fet-launch.mp4)
+[![Video launch fet: belajar front-end sampai paham cara kerjanya](docs/public/fet-launch-poster.jpg)](https://chalidade.github.io/front-end-training/fet-launch.mp4)
 
-🎬 **[Tonton video launch (33 detik)](https://chalidade.github.io/fet/fet-launch.mp4)**: dari roadmap, Ruang Belajar,
+🎬 **[Tonton video launch (33 detik)](https://chalidade.github.io/front-end-training/fet-launch.mp4)**: dari roadmap, Ruang Belajar,
 uji pemahaman, sampai Bukti Belajar.
 
 Tempat untuk **deep dive front-end**: roadmap yang lengkap, cara belajar tiap tahapnya,
@@ -70,7 +70,7 @@ pnpm test        # vitest di semua package
 pnpm typecheck
 pnpm build       # tsup → ESM + CJS + .d.ts
 pnpm changeset   # catat perubahan sebelum rilis
-pnpm docs:dev    # jalankan situs dokumentasi di http://localhost:5173/fet/
+pnpm docs:dev    # jalankan situs dokumentasi di http://localhost:5173/front-end-training/
 ```
 
 Referensi awal roadmap: [roadmap.sh/frontend](https://roadmap.sh/frontend). Struktur dan isinya
