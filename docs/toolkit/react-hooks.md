@@ -9,7 +9,7 @@ pnpm add @chalidade/react-hooks
 
 ::: warning Belum dipublish
 Package ini belum dipublish ke npm. Sementara ini, salin source-nya dari
-[GitHub](https://github.com/chalidade/fet/tree/main/packages/react-hooks/src).
+[GitHub](https://github.com/chalidade/front-end-training/tree/main/packages/react-hooks/src).
 :::
 
 Membutuhkan React 18 atau lebih baru (`useSyncExternalStore`).

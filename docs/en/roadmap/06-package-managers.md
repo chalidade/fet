@@ -59,4 +59,4 @@ my machine" bugs and duplicate packages in your bundle.
 
 ## Related toolkit
 
-- This repo is an example pnpm monorepo. See [`packages/utils/package.json`](https://github.com/chalidade/fet/blob/main/packages/utils/package.json)
+- This repo is an example pnpm monorepo. See [`packages/utils/package.json`](https://github.com/chalidade/front-end-training/blob/main/packages/utils/package.json)

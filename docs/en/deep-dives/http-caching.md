@@ -91,13 +91,13 @@ when the user presses back, not HTTP responses.
 
 1. **Look at the real headers.**
    ```bash
-   curl -sI https://chalidade.github.io/fet/ | grep -iE "cache-control|etag|last-modified|age|expires"
+   curl -sI https://chalidade.github.io/front-end-training/ | grep -iE "cache-control|etag|last-modified|age|expires"
    ```
-   Then fetch a file under `/fet/assets/` and compare. Why are the values the same even though one
+   Then fetch a file under `/front-end-training/assets/` and compare. Why are the values the same even though one
    has a hash in its name? (GitHub Pages can't be configured per file.)
 2. **A 304 by hand.** Take the ETag from step 1, then:
    ```bash
-   curl -sI -H 'If-None-Match: "<etag>"' https://chalidade.github.io/fet/
+   curl -sI -H 'If-None-Match: "<etag>"' https://chalidade.github.io/front-end-training/
    ```
 3. **Your own server.** Write a tiny Node server that returns a different `Cache-Control` per path
    (`max-age=10`, `no-cache`, `no-store`, `max-age=31536000, immutable`). Open it in DevTools with

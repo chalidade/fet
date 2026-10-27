@@ -3,7 +3,7 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 import { phases, stages } from "./stages";
 import { taskList } from "@chalidade/learn-theme/markdown";
 
-const REPO = "https://github.com/chalidade/fet";
+const REPO = "https://github.com/chalidade/front-end-training";
 
 
 
@@ -96,7 +96,7 @@ export default withMermaid(
   defineConfig({
     title: "fet",
     description: "Front-End Training: roadmap, deep dives, and installable toolkits for front-end developers.",
-    base: "/fet/",
+    base: "/front-end-training/",
     cleanUrls: true,
     lastUpdated: true,
     srcExclude: ["templates/**"],
@@ -104,7 +104,7 @@ export default withMermaid(
       config: (md) => md.use(taskList),
     },
     head: [
-      ["link", { rel: "icon", type: "image/svg+xml", href: "/fet/logo.svg" }],
+      ["link", { rel: "icon", type: "image/svg+xml", href: "/front-end-training/logo.svg" }],
       ["meta", { name: "theme-color", content: "#4f46e5" }],
     ],
 

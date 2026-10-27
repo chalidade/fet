@@ -60,4 +60,4 @@ library's API feels "magical" to its users.
 
 ## Related toolkit
 
-- Every package in this repo is written in strict TS. See [`tsconfig.base.json`](https://github.com/chalidade/fet/blob/main/tsconfig.base.json)
+- Every package in this repo is written in strict TS. See [`tsconfig.base.json`](https://github.com/chalidade/front-end-training/blob/main/tsconfig.base.json)

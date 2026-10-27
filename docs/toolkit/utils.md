@@ -10,7 +10,7 @@ npm install @chalidade/utils
 
 ::: warning Belum dipublish
 Package ini belum dipublish ke npm. Sementara ini, salin source-nya dari
-[GitHub](https://github.com/chalidade/fet/tree/main/packages/utils/src).
+[GitHub](https://github.com/chalidade/front-end-training/tree/main/packages/utils/src).
 :::
 
 ## API
@@ -70,6 +70,6 @@ clamp(120, 0, 100); // 100
 
 Latihan yang disarankan:
 
-1. Tulis ulang `debounce` tanpa melihat [source-nya](https://github.com/chalidade/fet/blob/main/packages/utils/src/debounce.ts).
+1. Tulis ulang `debounce` tanpa melihat [source-nya](https://github.com/chalidade/front-end-training/blob/main/packages/utils/src/debounce.ts).
 2. Jalankan `pnpm test` untuk mengecek implementasimu.
 3. Bandingkan dengan `lodash.debounce` (opsi `leading`, `maxWait`) dan catat bedanya di [catatan eksperimen](/notes/).

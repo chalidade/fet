@@ -10,7 +10,7 @@ pnpm add @chalidade/tokens
 
 ::: warning Belum dipublish
 Package ini belum dipublish ke npm. Sementara ini, salin source-nya dari
-[GitHub](https://github.com/chalidade/fet/tree/main/packages/tokens/src).
+[GitHub](https://github.com/chalidade/front-end-training/tree/main/packages/tokens/src).
 :::
 
 ## Kenapa design tokens?

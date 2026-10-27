@@ -9,7 +9,7 @@ pnpm add @chalidade/react-hooks
 
 ::: warning Not published yet
 This package isn't on npm yet. For now, copy the source from
-[GitHub](https://github.com/chalidade/fet/tree/main/packages/react-hooks/src).
+[GitHub](https://github.com/chalidade/front-end-training/tree/main/packages/react-hooks/src).
 :::
 
 Requires React 18 or newer (`useSyncExternalStore`).

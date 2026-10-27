@@ -92,13 +92,13 @@ sedang hidup saat user menekan tombol back, bukan respons HTTP.
 
 1. **Lihat header aslinya.**
    ```bash
-   curl -sI https://chalidade.github.io/fet/ | grep -iE "cache-control|etag|last-modified|age|expires"
+   curl -sI https://chalidade.github.io/front-end-training/ | grep -iE "cache-control|etag|last-modified|age|expires"
    ```
-   Lalu ambil salah satu file di `/fet/assets/` dan bandingkan. Kenapa nilainya sama padahal satu
+   Lalu ambil salah satu file di `/front-end-training/assets/` dan bandingkan. Kenapa nilainya sama padahal satu
    punya hash di namanya? (GitHub Pages tidak bisa diatur per file.)
 2. **304 dengan tangan.** Ambil ETag dari langkah 1, lalu:
    ```bash
-   curl -sI -H 'If-None-Match: "<etag>"' https://chalidade.github.io/fet/
+   curl -sI -H 'If-None-Match: "<etag>"' https://chalidade.github.io/front-end-training/
    ```
 3. **Server sendiri.** Buat server Node kecil yang mengembalikan `Cache-Control` berbeda per path
    (`max-age=10`, `no-cache`, `no-store`, `max-age=31536000, immutable`). Buka di DevTools dengan
