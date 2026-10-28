@@ -47,6 +47,7 @@ function sidebar(lang: "id" | "en"): DefaultTheme.Sidebar {
           { text: t("Efisiensi di React", "Efficiency in React"), link: `${p}/deep-dives/react-efficiency` },
           { text: t("Cara kerja V8", "How V8 works"), link: `${p}/deep-dives/v8` },
           { text: "Accessibility tree", link: `${p}/deep-dives/accessibility-tree` },
+          { text: "React Fiber", link: `${p}/deep-dives/react-fiber` },
         ],
       },
     ],
