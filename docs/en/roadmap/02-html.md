@@ -71,3 +71,4 @@ keyboard) without any JavaScript.
 ## Related toolkit
 
 - (planned) `@chalidade/ui`: every component follows APG patterns
+- Deep dive: [The accessibility tree & how screen readers work](../deep-dives/accessibility-tree.md)
