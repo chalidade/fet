@@ -12,7 +12,7 @@ usually just use, with experiments you can run yourself.
 | [Efficiency in React](react-efficiency.md): debounce, memo, transitions, virtualization | ✅ | 04, 07, 16 |
 | [How V8 works](v8.md): parsing, Ignition, TurboFan, hidden classes | ✅ | 04, 16 |
 | [The accessibility tree & how screen readers work](accessibility-tree.md) | ✅ | 02, 07, 15 |
-| React Fiber from the source code | 🗓️ | 07 |
+| [React Fiber from the source code](react-fiber.md): work loop, hooks, lanes, commit | ✅ | 07 |
 | Signals: from Knockout to the TC39 proposal | 🗓️ | 07 |
 | A module bundler from scratch | 🗓️ | 09 |
 | Design systems: tokens, governance, versioning | 🗓️ | 08 |
