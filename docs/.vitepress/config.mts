@@ -48,6 +48,8 @@ function sidebar(lang: "id" | "en"): DefaultTheme.Sidebar {
           { text: t("Cara kerja V8", "How V8 works"), link: `${p}/deep-dives/v8` },
           { text: "Accessibility tree", link: `${p}/deep-dives/accessibility-tree` },
           { text: "React Fiber", link: `${p}/deep-dives/react-fiber` },
+          { text: "Signals", link: `${p}/deep-dives/signals` },
+          { text: t("Module bundler dari nol", "Module bundler from scratch"), link: `${p}/deep-dives/module-bundler` },
         ],
       },
     ],
